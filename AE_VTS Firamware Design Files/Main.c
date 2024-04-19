@@ -84,7 +84,7 @@ int main()
 	//LCD_String("**by AE, SUDAN**");
 	//_delay_ms(200);
 	//
-	//
+	
 	/*-----------------------------------------SIM800L Initialization------------------------------------------------------------------
 	1. Check AT command.
 	2. Set baud rate.
@@ -504,7 +504,7 @@ int main()
 //{
 ///*the format of the incoming call is as:-
 //<CR><LF>RING<CR><LF>
-//<CR><LF>+CLIP: “NUMBER”,type of number,””,,”NAME”,0<CR><LF> */
+//<CR><LF>+CLIP: Â“NUMBERÂ”,type of number,Â”Â”,,Â”NAMEÂ”,0<CR><LF> */
 //
 //ATresponse_length = UART_RxString((char *)ATresponse);	// Receive the response of SIM800L in "ATresponse" and its length "ATresponse_length"
 //
