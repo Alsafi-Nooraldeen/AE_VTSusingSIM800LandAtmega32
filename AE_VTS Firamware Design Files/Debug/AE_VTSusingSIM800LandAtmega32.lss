@@ -1,0 +1,2796 @@
+
+AE_VTSusingSIM800LandAtmega32.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000012fa  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000304  00800060  000012fa  0000138e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000019  00800364  00800364  00001692  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00001692  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 000000e0  00000000  00000000  000016c2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00004114  00000000  00000000  000017a2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000003dc  00000000  00000000  000058b6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000a32  00000000  00000000  00005c92  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000434  00000000  00000000  000066c4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000084a  00000000  00000000  00006af8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00001d00  00000000  00000000  00007342  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000100  00000000  00000000  00009042  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 db 00 	jmp	0x1b6	; 0x1b6 <__ctors_end>
+       4:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+       8:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+       c:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      10:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      14:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      18:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      1c:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      20:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      24:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      28:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      2c:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      30:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      34:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      38:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      3c:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      40:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      44:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      48:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      4c:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+      50:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+
+00000054 <GSMLOC>:
+      54:	41 54 2b 43 49 50 47 53 4d 4c 4f 43 3d 31 2c 31     AT+CIPGSMLOC=1,1
+      64:	0d 0a 00                                            ...
+
+00000067 <HTTPPARAURL>:
+      67:	41 54 2b 48 54 54 50 50 41 52 41 3d 22 55 52 4c     AT+HTTPPARA="URL
+      77:	22 2c 22 68 74 74 70 3a 2f 2f 6d 61 70 73 2e 67     ","http://maps.g
+      87:	6f 6f 67 6c 65 2e 63 6f 6d 2f 6d 61 70 73 3f 71     oogle.com/maps?q
+      97:	3d 22 0d 0a 00                                      ="...
+
+0000009c <HTTPPARACID>:
+      9c:	41 54 2b 48 54 54 50 50 41 52 41 3d 22 43 49 44     AT+HTTPPARA="CID
+      ac:	22 2c 31 0d 0a 00                                   ",1...
+
+000000b2 <HTTPSERVERINIT>:
+      b2:	41 54 2b 48 54 54 50 49 4e 49 54 0d 0a 00           AT+HTTPINIT...
+
+000000c0 <HTTPSERVERTEST>:
+      c0:	41 54 2b 48 54 54 50 49 4e 49 54 3d 3f 0d 0a 00     AT+HTTPINIT=?...
+
+000000d0 <SAPBRCLOSE>:
+      d0:	41 54 2b 53 41 50 42 52 3d 30 2c 31 0d 0a 00        AT+SAPBR=0,1...
+
+000000df <SAPBRQUERY>:
+      df:	41 54 2b 53 41 50 42 52 3d 32 2c 31 0d 0a 00        AT+SAPBR=2,1...
+
+000000ee <SAPBROPEN>:
+      ee:	41 54 2b 53 41 50 42 52 3d 31 2c 31 0d 0a 00        AT+SAPBR=1,1...
+
+000000fd <SAPBR_PWD>:
+      fd:	41 54 2b 53 41 50 42 52 3d 33 2c 31 2c 22 50 57     AT+SAPBR=3,1,"PW
+     10d:	44 22 2c 22 73 75 64 61 6e 69 22 0d 0a 00           D","sudani"...
+
+0000011b <SAPBR_USER>:
+     11b:	41 54 2b 53 41 50 42 52 3d 33 2c 31 2c 22 55 53     AT+SAPBR=3,1,"US
+     12b:	45 52 22 2c 22 73 75 64 61 6e 69 22 0d 0a 00        ER","sudani"...
+
+0000013a <SAPBR_APN>:
+     13a:	41 54 2b 53 41 50 42 52 3d 33 2c 31 2c 22 41 50     AT+SAPBR=3,1,"AP
+     14a:	4e 22 2c 22 73 75 64 61 6e 69 6e 65 74 22 0d 0a     N","sudaninet"..
+	...
+
+0000015b <SAPBR_CONTYPE>:
+     15b:	41 54 2b 53 41 50 42 52 3d 33 2c 31 2c 22 43 4f     AT+SAPBR=3,1,"CO
+     16b:	4e 54 59 50 45 22 2c 22 47 50 52 53 22 0d 0a 00     NTYPE","GPRS"...
+
+0000017b <SIMIDSHOW>:
+     17b:	41 54 2b 43 43 49 44 0d 0a 00                       AT+CCID...
+
+00000185 <SIMIDCHCK>:
+     185:	41 54 2b 43 43 49 44 3d 3f 0d 0a 00                 AT+CCID=?...
+
+00000191 <SAVECNF>:
+     191:	41 54 26 57 0d 0a 00                                AT&W...
+
+00000198 <SETBAUD>:
+     198:	41 54 2b 49 50 52 3d 32 34 30 30 0d 0a 00           AT+IPR=2400...
+
+000001a6 <ECHO_OFF>:
+     1a6:	41 54 45 30 0d 0a 00                                ATE0...
+
+000001ad <ISOK>:
+     1ad:	4f 4b 00                                            OK.
+
+000001b0 <AT>:
+     1b0:	41 54 0d 0a 00 00                                   AT....
+
+000001b6 <__ctors_end>:
+     1b6:	11 24       	eor	r1, r1
+     1b8:	1f be       	out	0x3f, r1	; 63
+     1ba:	cf e5       	ldi	r28, 0x5F	; 95
+     1bc:	d8 e0       	ldi	r29, 0x08	; 8
+     1be:	de bf       	out	0x3e, r29	; 62
+     1c0:	cd bf       	out	0x3d, r28	; 61
+
+000001c2 <__do_copy_data>:
+     1c2:	13 e0       	ldi	r17, 0x03	; 3
+     1c4:	a0 e6       	ldi	r26, 0x60	; 96
+     1c6:	b0 e0       	ldi	r27, 0x00	; 0
+     1c8:	ea ef       	ldi	r30, 0xFA	; 250
+     1ca:	f2 e1       	ldi	r31, 0x12	; 18
+     1cc:	02 c0       	rjmp	.+4      	; 0x1d2 <__do_copy_data+0x10>
+     1ce:	05 90       	lpm	r0, Z+
+     1d0:	0d 92       	st	X+, r0
+     1d2:	a4 36       	cpi	r26, 0x64	; 100
+     1d4:	b1 07       	cpc	r27, r17
+     1d6:	d9 f7       	brne	.-10     	; 0x1ce <__do_copy_data+0xc>
+
+000001d8 <__do_clear_bss>:
+     1d8:	23 e0       	ldi	r18, 0x03	; 3
+     1da:	a4 e6       	ldi	r26, 0x64	; 100
+     1dc:	b3 e0       	ldi	r27, 0x03	; 3
+     1de:	01 c0       	rjmp	.+2      	; 0x1e2 <.do_clear_bss_start>
+
+000001e0 <.do_clear_bss_loop>:
+     1e0:	1d 92       	st	X+, r1
+
+000001e2 <.do_clear_bss_start>:
+     1e2:	ad 37       	cpi	r26, 0x7D	; 125
+     1e4:	b2 07       	cpc	r27, r18
+     1e6:	e1 f7       	brne	.-8      	; 0x1e0 <.do_clear_bss_loop>
+     1e8:	0e 94 a3 06 	call	0xd46	; 0xd46 <main>
+     1ec:	0c 94 7b 09 	jmp	0x12f6	; 0x12f6 <_exit>
+
+000001f0 <__bad_interrupt>:
+     1f0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000001f4 <LCD_Command>:
+		_delay_ms(1200);
+		
+		
+		
+		// copy the ATresponse to smsATresponse which is: +CMGR: <x>,<x>,<xxx> or +CMS ERROR: <err>
+		for (colon_location=0; RXsmsResponse[colon_location] !=':'; colon_location++) {RXsmsPREFIX[colon_location]=RXsmsResponse[colon_location];};
+     1f4:	98 b3       	in	r25, 0x18	; 24
+     1f6:	28 2f       	mov	r18, r24
+     1f8:	20 7f       	andi	r18, 0xF0	; 240
+     1fa:	9f 70       	andi	r25, 0x0F	; 15
+     1fc:	92 2b       	or	r25, r18
+     1fe:	98 bb       	out	0x18, r25	; 24
+     200:	c0 98       	cbi	0x18, 0	; 24
+     202:	c1 9a       	sbi	0x18, 1	; 24
+     204:	00 00       	nop
+     206:	c1 98       	cbi	0x18, 1	; 24
+     208:	32 e4       	ldi	r19, 0x42	; 66
+     20a:	3a 95       	dec	r19
+     20c:	f1 f7       	brne	.-4      	; 0x20a <LCD_Command+0x16>
+     20e:	00 c0       	rjmp	.+0      	; 0x210 <LCD_Command+0x1c>
+     210:	28 b3       	in	r18, 0x18	; 24
+		
+		LCD_Clear();
+     212:	30 e1       	ldi	r19, 0x10	; 16
+     214:	83 9f       	mul	r24, r19
+		LCD_String(RXsmsPREFIX);
+     216:	c0 01       	movw	r24, r0
+     218:	11 24       	eor	r1, r1
+     21a:	92 2f       	mov	r25, r18
+     21c:	9f 70       	andi	r25, 0x0F	; 15
+		LCD_Command(0xC0);
+     21e:	89 2b       	or	r24, r25
+     220:	88 bb       	out	0x18, r24	; 24
+     222:	c1 9a       	sbi	0x18, 1	; 24
+		LCD_Char(colon_location/10 +48);
+     224:	00 00       	nop
+     226:	c1 98       	cbi	0x18, 1	; 24
+     228:	83 ef       	ldi	r24, 0xF3	; 243
+     22a:	91 e0       	ldi	r25, 0x01	; 1
+     22c:	01 97       	sbiw	r24, 0x01	; 1
+     22e:	f1 f7       	brne	.-4      	; 0x22c <LCD_Command+0x38>
+     230:	00 c0       	rjmp	.+0      	; 0x232 <LCD_Command+0x3e>
+     232:	00 00       	nop
+     234:	08 95       	ret
+
+00000236 <LCD_Init>:
+     236:	8f ef       	ldi	r24, 0xFF	; 255
+		LCD_Char(colon_location%10 +48);
+     238:	87 bb       	out	0x17, r24	; 23
+     23a:	c1 98       	cbi	0x18, 1	; 24
+     23c:	87 e8       	ldi	r24, 0x87	; 135
+     23e:	93 e1       	ldi	r25, 0x13	; 19
+     240:	01 97       	sbiw	r24, 0x01	; 1
+     242:	f1 f7       	brne	.-4      	; 0x240 <LCD_Init+0xa>
+     244:	00 c0       	rjmp	.+0      	; 0x246 <LCD_Init+0x10>
+     246:	00 00       	nop
+     248:	83 e3       	ldi	r24, 0x33	; 51
+     24a:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     24e:	82 e3       	ldi	r24, 0x32	; 50
+     250:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+     254:	88 e2       	ldi	r24, 0x28	; 40
+     256:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+     25a:	8e e0       	ldi	r24, 0x0E	; 14
+     25c:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		_delay_ms(1200);
+		
+		
+		if (strncmp((const char *)RXsmsPREFIX, "+CMGR", colon_location)==0)
+     260:	81 e0       	ldi	r24, 0x01	; 1
+     262:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+     266:	83 ef       	ldi	r24, 0xF3	; 243
+     268:	91 e0       	ldi	r25, 0x01	; 1
+     26a:	01 97       	sbiw	r24, 0x01	; 1
+     26c:	f1 f7       	brne	.-4      	; 0x26a <LCD_Init+0x34>
+     26e:	00 c0       	rjmp	.+0      	; 0x270 <LCD_Init+0x3a>
+     270:	00 00       	nop
+     272:	86 e0       	ldi	r24, 0x06	; 6
+     274:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		{
+			// If text mode(+CMGF=1) and receiving successful: +CMGR: <x>,<x>,<xxx>
+			RXSMS=1;
+			SMSERROR=0;
+			//--------------------------------------- Received SMS STATUS --------------------------------------------------------
+			for (doublequote_loc=colon_location; RXsmsResponse[doublequote_loc] !='\"'; doublequote_loc++){}; // locate (index) the First double quote'\"'
+     278:	80 e8       	ldi	r24, 0x80	; 128
+     27a:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+     27e:	08 95       	ret
+
+00000280 <LCD_Char>:
+     280:	98 b3       	in	r25, 0x18	; 24
+     282:	28 2f       	mov	r18, r24
+     284:	20 7f       	andi	r18, 0xF0	; 240
+     286:	9f 70       	andi	r25, 0x0F	; 15
+     288:	92 2b       	or	r25, r18
+     28a:	98 bb       	out	0x18, r25	; 24
+     28c:	c0 9a       	sbi	0x18, 0	; 24
+     28e:	c1 9a       	sbi	0x18, 1	; 24
+     290:	00 00       	nop
+     292:	c1 98       	cbi	0x18, 1	; 24
+     294:	32 e4       	ldi	r19, 0x42	; 66
+			doublequote_loc++; // Increment doublequote_loc to get the index of the next character to the First '\"'
+     296:	3a 95       	dec	r19
+			// Obtain the SMS status either "REC READ" or "REC UNREAD"
+			for (i=0; RXsmsResponse[doublequote_loc] !='\"'; i++, doublequote_loc++) { RXsmsSTATUS[i]=RXsmsResponse[doublequote_loc]; };
+     298:	f1 f7       	brne	.-4      	; 0x296 <LCD_Char+0x16>
+     29a:	00 c0       	rjmp	.+0      	; 0x29c <LCD_Char+0x1c>
+     29c:	28 b3       	in	r18, 0x18	; 24
+     29e:	30 e1       	ldi	r19, 0x10	; 16
+     2a0:	83 9f       	mul	r24, r19
+     2a2:	c0 01       	movw	r24, r0
+     2a4:	11 24       	eor	r1, r1
+     2a6:	92 2f       	mov	r25, r18
+     2a8:	9f 70       	andi	r25, 0x0F	; 15
+     2aa:	89 2b       	or	r24, r25
+     2ac:	88 bb       	out	0x18, r24	; 24
+     2ae:	c1 9a       	sbi	0x18, 1	; 24
+     2b0:	00 00       	nop
+     2b2:	c1 98       	cbi	0x18, 1	; 24
+     2b4:	83 ef       	ldi	r24, 0xF3	; 243
+     2b6:	91 e0       	ldi	r25, 0x01	; 1
+     2b8:	01 97       	sbiw	r24, 0x01	; 1
+     2ba:	f1 f7       	brne	.-4      	; 0x2b8 <LCD_Char+0x38>
+     2bc:	00 c0       	rjmp	.+0      	; 0x2be <LCD_Char+0x3e>
+     2be:	00 00       	nop
+     2c0:	08 95       	ret
+
+000002c2 <LCD_String>:
+     2c2:	cf 93       	push	r28
+     2c4:	df 93       	push	r29
+     2c6:	ec 01       	movw	r28, r24
+     2c8:	88 81       	ld	r24, Y
+			RXsmsSTATUS[i]='\0'; // Terminate the RXsmsSTATUS array with NULL='\0' character
+     2ca:	88 23       	and	r24, r24
+     2cc:	31 f0       	breq	.+12     	; 0x2da <LCD_String+0x18>
+     2ce:	21 96       	adiw	r28, 0x01	; 1
+     2d0:	0e 94 40 01 	call	0x280	; 0x280 <LCD_Char>
+			
+			LCD_Clear();
+     2d4:	89 91       	ld	r24, Y+
+     2d6:	81 11       	cpse	r24, r1
+			LCD_String(RXsmsSTATUS);
+     2d8:	fb cf       	rjmp	.-10     	; 0x2d0 <LCD_String+0xe>
+     2da:	df 91       	pop	r29
+     2dc:	cf 91       	pop	r28
+     2de:	08 95       	ret
+
+000002e0 <LCD_Clear>:
+			LCD_Command(0xC0);
+     2e0:	81 e0       	ldi	r24, 0x01	; 1
+     2e2:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+			LCD_Char(i/10 +48);
+     2e6:	83 ef       	ldi	r24, 0xF3	; 243
+     2e8:	91 e0       	ldi	r25, 0x01	; 1
+     2ea:	01 97       	sbiw	r24, 0x01	; 1
+     2ec:	f1 f7       	brne	.-4      	; 0x2ea <LCD_Clear+0xa>
+     2ee:	00 c0       	rjmp	.+0      	; 0x2f0 <LCD_Clear+0x10>
+     2f0:	00 00       	nop
+     2f2:	80 e8       	ldi	r24, 0x80	; 128
+     2f4:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+     2f8:	08 95       	ret
+
+000002fa <UART_Init>:
+     2fa:	10 bc       	out	0x20, r1	; 32
+			LCD_Char(i%10 +48);
+     2fc:	dc 01       	movw	r26, r24
+     2fe:	cb 01       	movw	r24, r22
+     300:	88 0f       	add	r24, r24
+     302:	99 1f       	adc	r25, r25
+     304:	aa 1f       	adc	r26, r26
+     306:	bb 1f       	adc	r27, r27
+     308:	88 0f       	add	r24, r24
+     30a:	99 1f       	adc	r25, r25
+     30c:	aa 1f       	adc	r26, r26
+     30e:	bb 1f       	adc	r27, r27
+     310:	9c 01       	movw	r18, r24
+     312:	ad 01       	movw	r20, r26
+     314:	22 0f       	add	r18, r18
+     316:	33 1f       	adc	r19, r19
+     318:	44 1f       	adc	r20, r20
+     31a:	55 1f       	adc	r21, r21
+     31c:	22 0f       	add	r18, r18
+     31e:	33 1f       	adc	r19, r19
+     320:	44 1f       	adc	r20, r20
+			_delay_ms(1200);
+			//---------------------------------------- Received SMS PHONE NUMBER --------------------------------------------------
+			doublequote_loc++; // Increment doublequote_loc to get the index of the next character to the Second double quote'\"'
+     322:	55 1f       	adc	r21, r21
+			while (RXsmsResponse[doublequote_loc] !='\"') {doublequote_loc++;};// locate (index) the Third double quote'\"'
+     324:	60 e4       	ldi	r22, 0x40	; 64
+     326:	72 e4       	ldi	r23, 0x42	; 66
+     328:	8f e0       	ldi	r24, 0x0F	; 15
+     32a:	90 e0       	ldi	r25, 0x00	; 0
+     32c:	0e 94 1c 09 	call	0x1238	; 0x1238 <__udivmodsi4>
+     330:	da 01       	movw	r26, r20
+     332:	c9 01       	movw	r24, r18
+     334:	01 97       	sbiw	r24, 0x01	; 1
+     336:	a1 09       	sbc	r26, r1
+     338:	b1 09       	sbc	r27, r1
+     33a:	89 2f       	mov	r24, r25
+     33c:	9a 2f       	mov	r25, r26
+     33e:	ab 2f       	mov	r26, r27
+     340:	bb 27       	eor	r27, r27
+     342:	80 bd       	out	0x20, r24	; 32
+			doublequote_loc++; // Increment doublequote_loc to get the index of the next character to the Third double quote '\"'
+     344:	21 50       	subi	r18, 0x01	; 1
+     346:	29 b9       	out	0x09, r18	; 9
+			// Obtain the Received SMS phone number
+			for (i=0; RXsmsResponse[doublequote_loc] !='\"'; i++, doublequote_loc++) { RXsmsPHONENO[i]=RXsmsResponse[doublequote_loc]; };
+     348:	88 e1       	ldi	r24, 0x18	; 24
+     34a:	8a b9       	out	0x0a, r24	; 10
+     34c:	80 e8       	ldi	r24, 0x80	; 128
+     34e:	80 bd       	out	0x20, r24	; 32
+     350:	80 bd       	out	0x20, r24	; 32
+     352:	80 bd       	out	0x20, r24	; 32
+     354:	86 e8       	ldi	r24, 0x86	; 134
+     356:	80 bd       	out	0x20, r24	; 32
+     358:	08 95       	ret
+
+0000035a <UART_TxChar>:
+     35a:	5d 9b       	sbis	0x0b, 5	; 11
+     35c:	fe cf       	rjmp	.-4      	; 0x35a <UART_TxChar>
+     35e:	8c b9       	out	0x0c, r24	; 12
+     360:	08 95       	ret
+
+00000362 <UART_RxChar>:
+     362:	5f 9b       	sbis	0x0b, 7	; 11
+     364:	fe cf       	rjmp	.-4      	; 0x362 <UART_RxChar>
+     366:	8c b1       	in	r24, 0x0c	; 12
+     368:	08 95       	ret
+
+0000036a <UART_RxString>:
+     36a:	1f 93       	push	r17
+     36c:	cf 93       	push	r28
+     36e:	df 93       	push	r29
+     370:	ec 01       	movw	r28, r24
+     372:	0e 94 b1 01 	call	0x362	; 0x362 <UART_RxChar>
+     376:	8d 30       	cpi	r24, 0x0D	; 13
+     378:	e1 f7       	brne	.-8      	; 0x372 <UART_RxString+0x8>
+			RXsmsPHONENO[i]='\0'; // Terminate the RXsmsPHONENO array with NULL='\0' character
+     37a:	0e 94 b1 01 	call	0x362	; 0x362 <UART_RxChar>
+     37e:	8a 30       	cpi	r24, 0x0A	; 10
+     380:	a9 f4       	brne	.+42     	; 0x3ac <UART_RxString+0x42>
+     382:	10 e0       	ldi	r17, 0x00	; 0
+			LCD_Clear();
+     384:	0e 94 b1 01 	call	0x362	; 0x362 <UART_RxChar>
+			LCD_String(RXsmsPHONENO);
+     388:	fe 01       	movw	r30, r28
+     38a:	e1 0f       	add	r30, r17
+     38c:	f1 1d       	adc	r31, r1
+     38e:	80 83       	st	Z, r24
+			LCD_Command(0xC0);
+     390:	1f 5f       	subi	r17, 0xFF	; 255
+     392:	8a 30       	cpi	r24, 0x0A	; 10
+     394:	19 f0       	breq	.+6      	; 0x39c <UART_RxString+0x32>
+			LCD_Char(i/10 +48);
+     396:	8d 30       	cpi	r24, 0x0D	; 13
+     398:	a9 f7       	brne	.-22     	; 0x384 <UART_RxString+0x1a>
+     39a:	02 c0       	rjmp	.+4      	; 0x3a0 <UART_RxString+0x36>
+     39c:	81 2f       	mov	r24, r17
+     39e:	01 c0       	rjmp	.+2      	; 0x3a2 <UART_RxString+0x38>
+     3a0:	81 2f       	mov	r24, r17
+     3a2:	c8 0f       	add	r28, r24
+     3a4:	d1 1d       	adc	r29, r1
+     3a6:	21 97       	sbiw	r28, 0x01	; 1
+     3a8:	18 82       	st	Y, r1
+     3aa:	01 c0       	rjmp	.+2      	; 0x3ae <UART_RxString+0x44>
+			LCD_Char(i%10 +48);
+     3ac:	10 e0       	ldi	r17, 0x00	; 0
+     3ae:	81 2f       	mov	r24, r17
+     3b0:	df 91       	pop	r29
+     3b2:	cf 91       	pop	r28
+     3b4:	1f 91       	pop	r17
+     3b6:	08 95       	ret
+
+000003b8 <UART_TxStringfromPROGMEM>:
+     3b8:	cf 93       	push	r28
+     3ba:	df 93       	push	r29
+     3bc:	ec 01       	movw	r28, r24
+     3be:	fe 01       	movw	r30, r28
+     3c0:	24 91       	lpm	r18, Z
+     3c2:	22 23       	and	r18, r18
+     3c4:	51 f0       	breq	.+20     	; 0x3da <UART_TxStringfromPROGMEM+0x22>
+     3c6:	21 96       	adiw	r28, 0x01	; 1
+     3c8:	fc 01       	movw	r30, r24
+     3ca:	84 91       	lpm	r24, Z
+     3cc:	0e 94 ad 01 	call	0x35a	; 0x35a <UART_TxChar>
+     3d0:	ce 01       	movw	r24, r28
+			_delay_ms(1200);
+			//----------------------------------------- Received SMS PHONE NAME ----------------------------------------------------
+			doublequote_loc++; // Increment doublequote_loc to get the index of the next character to the Fourth double quote '\"'
+     3d2:	fe 01       	movw	r30, r28
+			while (RXsmsResponse[doublequote_loc] !='\"') {doublequote_loc++;};// locate (index) the Fifth double quote '\"'
+     3d4:	24 91       	lpm	r18, Z
+     3d6:	21 11       	cpse	r18, r1
+     3d8:	f6 cf       	rjmp	.-20     	; 0x3c6 <UART_TxStringfromPROGMEM+0xe>
+     3da:	df 91       	pop	r29
+     3dc:	cf 91       	pop	r28
+     3de:	08 95       	ret
+
+000003e0 <CheckAT>:
+     3e0:	10 92 7c 03 	sts	0x037C, r1
+     3e4:	80 eb       	ldi	r24, 0xB0	; 176
+     3e6:	91 e0       	ldi	r25, 0x01	; 1
+     3e8:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+     3ec:	80 e9       	ldi	r24, 0x90	; 144
+     3ee:	90 e0       	ldi	r25, 0x00	; 0
+     3f0:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+			doublequote_loc++; // Increment doublequote_loc to get the index of the next character to the Fifth double quote '\"'
+     3f4:	80 93 7c 03 	sts	0x037C, r24
+			// Obtain the Received SMS phone Name (if any)
+			for (i=0; RXsmsResponse[doublequote_loc] !='\"'; i++, doublequote_loc++)	{ RXsmsPHONENAME[i]=RXsmsResponse[doublequote_loc]; };
+     3f8:	43 e0       	ldi	r20, 0x03	; 3
+     3fa:	50 e0       	ldi	r21, 0x00	; 0
+     3fc:	6d ea       	ldi	r22, 0xAD	; 173
+     3fe:	71 e0       	ldi	r23, 0x01	; 1
+     400:	88 e6       	ldi	r24, 0x68	; 104
+     402:	93 e0       	ldi	r25, 0x03	; 3
+     404:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+     408:	40 91 7c 03 	lds	r20, 0x037C
+     40c:	50 e0       	ldi	r21, 0x00	; 0
+     40e:	68 e6       	ldi	r22, 0x68	; 104
+     410:	73 e0       	ldi	r23, 0x03	; 3
+     412:	80 e9       	ldi	r24, 0x90	; 144
+     414:	90 e0       	ldi	r25, 0x00	; 0
+     416:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     41a:	89 2b       	or	r24, r25
+     41c:	19 f7       	brne	.-58     	; 0x3e4 <CheckAT+0x4>
+     41e:	88 e9       	ldi	r24, 0x98	; 152
+     420:	91 e0       	ldi	r25, 0x01	; 1
+     422:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+     426:	80 e9       	ldi	r24, 0x90	; 144
+			RXsmsPHONENAME[i]='\0'; // Terminate the RXsmsPHONENAME array with NULL='\0' character
+     428:	90 e0       	ldi	r25, 0x00	; 0
+     42a:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     42e:	80 93 7c 03 	sts	0x037C, r24
+			LCD_Clear();
+     432:	43 e0       	ldi	r20, 0x03	; 3
+     434:	50 e0       	ldi	r21, 0x00	; 0
+			LCD_String(RXsmsPHONENAME);
+     436:	6d ea       	ldi	r22, 0xAD	; 173
+     438:	71 e0       	ldi	r23, 0x01	; 1
+     43a:	88 e6       	ldi	r24, 0x68	; 104
+     43c:	93 e0       	ldi	r25, 0x03	; 3
+			LCD_Command(0xC0);
+     43e:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+     442:	40 91 7c 03 	lds	r20, 0x037C
+			LCD_Char(i/10 +48);
+     446:	50 e0       	ldi	r21, 0x00	; 0
+     448:	68 e6       	ldi	r22, 0x68	; 104
+     44a:	73 e0       	ldi	r23, 0x03	; 3
+     44c:	80 e9       	ldi	r24, 0x90	; 144
+     44e:	90 e0       	ldi	r25, 0x00	; 0
+     450:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     454:	89 2b       	or	r24, r25
+     456:	19 f7       	brne	.-58     	; 0x41e <CheckAT+0x3e>
+     458:	81 e9       	ldi	r24, 0x91	; 145
+			LCD_Char(i%10 +48);
+     45a:	91 e0       	ldi	r25, 0x01	; 1
+     45c:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+     460:	80 e9       	ldi	r24, 0x90	; 144
+     462:	90 e0       	ldi	r25, 0x00	; 0
+     464:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     468:	80 93 7c 03 	sts	0x037C, r24
+     46c:	43 e0       	ldi	r20, 0x03	; 3
+     46e:	50 e0       	ldi	r21, 0x00	; 0
+     470:	6d ea       	ldi	r22, 0xAD	; 173
+     472:	71 e0       	ldi	r23, 0x01	; 1
+     474:	88 e6       	ldi	r24, 0x68	; 104
+     476:	93 e0       	ldi	r25, 0x03	; 3
+     478:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+     47c:	40 91 7c 03 	lds	r20, 0x037C
+			_delay_ms(1200);
+			//-------------------------------------------Received SMS DATE and TIME ------------------------------------------------
+			doublequote_loc++; // Increment doublequote_loc to get the index of the next character to the Fifth double quote '\"'
+     480:	50 e0       	ldi	r21, 0x00	; 0
+			while (RXsmsResponse[doublequote_loc] !='\"') {doublequote_loc++;};// locate (index) the Sixth double quote '\"'
+     482:	68 e6       	ldi	r22, 0x68	; 104
+     484:	73 e0       	ldi	r23, 0x03	; 3
+     486:	80 e9       	ldi	r24, 0x90	; 144
+     488:	90 e0       	ldi	r25, 0x00	; 0
+     48a:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     48e:	89 2b       	or	r24, r25
+     490:	19 f7       	brne	.-58     	; 0x458 <CheckAT+0x78>
+     492:	86 ea       	ldi	r24, 0xA6	; 166
+     494:	91 e0       	ldi	r25, 0x01	; 1
+     496:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+     49a:	80 e9       	ldi	r24, 0x90	; 144
+     49c:	90 e0       	ldi	r25, 0x00	; 0
+     49e:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+			doublequote_loc++; // Increment doublequote_loc to get the index of the next character to the Sixth double quote '\"'
+     4a2:	80 93 7c 03 	sts	0x037C, r24
+			// Obtain the Received SMS time and date
+			for (i=0; RXsmsResponse[doublequote_loc] !='\"'; i++, doublequote_loc++)	{ RXsmsDATETIME[i]=RXsmsResponse[doublequote_loc]; };
+     4a6:	43 e0       	ldi	r20, 0x03	; 3
+     4a8:	50 e0       	ldi	r21, 0x00	; 0
+     4aa:	6d ea       	ldi	r22, 0xAD	; 173
+     4ac:	71 e0       	ldi	r23, 0x01	; 1
+     4ae:	88 e6       	ldi	r24, 0x68	; 104
+     4b0:	93 e0       	ldi	r25, 0x03	; 3
+     4b2:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+     4b6:	40 91 7c 03 	lds	r20, 0x037C
+     4ba:	50 e0       	ldi	r21, 0x00	; 0
+     4bc:	68 e6       	ldi	r22, 0x68	; 104
+     4be:	73 e0       	ldi	r23, 0x03	; 3
+     4c0:	80 e9       	ldi	r24, 0x90	; 144
+     4c2:	90 e0       	ldi	r25, 0x00	; 0
+     4c4:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     4c8:	89 2b       	or	r24, r25
+     4ca:	19 f7       	brne	.-58     	; 0x492 <CheckAT+0xb2>
+     4cc:	81 e0       	ldi	r24, 0x01	; 1
+     4ce:	08 95       	ret
+
+000004d0 <SIMcardINFO>:
+     4d0:	2f e7       	ldi	r18, 0x7F	; 127
+     4d2:	8a e1       	ldi	r24, 0x1A	; 26
+     4d4:	96 e0       	ldi	r25, 0x06	; 6
+			RXsmsDATETIME[i]='\0'; // Terminate the RXsmsDATETIME array with NULL='\0' character
+     4d6:	21 50       	subi	r18, 0x01	; 1
+     4d8:	80 40       	sbci	r24, 0x00	; 0
+     4da:	90 40       	sbci	r25, 0x00	; 0
+     4dc:	e1 f7       	brne	.-8      	; 0x4d6 <SIMcardINFO+0x6>
+     4de:	00 c0       	rjmp	.+0      	; 0x4e0 <SIMcardINFO+0x10>
+			LCD_Clear();
+     4e0:	00 00       	nop
+     4e2:	85 e8       	ldi	r24, 0x85	; 133
+			LCD_String(RXsmsDATETIME);
+     4e4:	91 e0       	ldi	r25, 0x01	; 1
+     4e6:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+     4ea:	80 e9       	ldi	r24, 0x90	; 144
+			LCD_Command(0xC0);
+     4ec:	90 e0       	ldi	r25, 0x00	; 0
+     4ee:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+			LCD_Char(i/10 +48);
+     4f2:	80 93 7c 03 	sts	0x037C, r24
+     4f6:	43 e0       	ldi	r20, 0x03	; 3
+     4f8:	50 e0       	ldi	r21, 0x00	; 0
+     4fa:	6d ea       	ldi	r22, 0xAD	; 173
+     4fc:	71 e0       	ldi	r23, 0x01	; 1
+     4fe:	88 e6       	ldi	r24, 0x68	; 104
+     500:	93 e0       	ldi	r25, 0x03	; 3
+     502:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+     506:	40 91 7c 03 	lds	r20, 0x037C
+			LCD_Char(i%10 +48);
+     50a:	50 e0       	ldi	r21, 0x00	; 0
+     50c:	68 e6       	ldi	r22, 0x68	; 104
+     50e:	73 e0       	ldi	r23, 0x03	; 3
+     510:	80 e9       	ldi	r24, 0x90	; 144
+     512:	90 e0       	ldi	r25, 0x00	; 0
+     514:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     518:	89 2b       	or	r24, r25
+     51a:	d1 f6       	brne	.-76     	; 0x4d0 <SIMcardINFO>
+     51c:	8b e7       	ldi	r24, 0x7B	; 123
+     51e:	91 e0       	ldi	r25, 0x01	; 1
+     520:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+     524:	80 e9       	ldi	r24, 0x90	; 144
+     526:	90 e0       	ldi	r25, 0x00	; 0
+     528:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     52c:	80 93 7c 03 	sts	0x037C, r24
+			_delay_ms(1200);
+			
+			LCD_Clear();
+     530:	46 e0       	ldi	r20, 0x06	; 6
+			LCD_Command(0xC0);
+     532:	50 e0       	ldi	r21, 0x00	; 0
+     534:	65 e0       	ldi	r22, 0x05	; 5
+     536:	71 e0       	ldi	r23, 0x01	; 1
+			LCD_Char((doublequote_loc/10) +48);
+     538:	80 e9       	ldi	r24, 0x90	; 144
+     53a:	90 e0       	ldi	r25, 0x00	; 0
+     53c:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     540:	21 e0       	ldi	r18, 0x01	; 1
+     542:	89 2b       	or	r24, r25
+     544:	09 f4       	brne	.+2      	; 0x548 <SIMcardINFO+0x78>
+     546:	20 e0       	ldi	r18, 0x00	; 0
+     548:	82 2f       	mov	r24, r18
+     54a:	08 95       	ret
+
+0000054c <BEARERconfiguration>:
+     54c:	bf 92       	push	r11
+			LCD_Char((doublequote_loc%10) +48);
+     54e:	cf 92       	push	r12
+     550:	df 92       	push	r13
+     552:	ef 92       	push	r14
+     554:	ff 92       	push	r15
+     556:	0f 93       	push	r16
+     558:	1f 93       	push	r17
+     55a:	cf 93       	push	r28
+     55c:	df 93       	push	r29
+     55e:	cd b7       	in	r28, 0x3d	; 61
+     560:	de b7       	in	r29, 0x3e	; 62
+     562:	2c 97       	sbiw	r28, 0x0c	; 12
+     564:	0f b6       	in	r0, 0x3f	; 63
+     566:	f8 94       	cli
+     568:	de bf       	out	0x3e, r29	; 62
+     56a:	0f be       	out	0x3f, r0	; 63
+     56c:	cd bf       	out	0x3d, r28	; 61
+     56e:	18 2f       	mov	r17, r24
+     570:	8b e5       	ldi	r24, 0x5B	; 91
+     572:	91 e0       	ldi	r25, 0x01	; 1
+			_delay_ms(1200);
+			//------------------------------------------Received SMS MESSAGE (data)---------------------------------------------------
+			// Locate the the Line Feed <LF> character looking for the <data> where the response as: xxxxxx <CR><LF><data>
+			doublequote_loc++; // Increment doublequote_loc to get the index of the next character to the Seventh double quote '\"'
+     574:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+			while (RXsmsResponse[doublequote_loc] !='\n') { doublequote_loc++; };// locate (index) the <LF>='\n'
+     578:	80 e9       	ldi	r24, 0x90	; 144
+     57a:	90 e0       	ldi	r25, 0x00	; 0
+     57c:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     580:	80 93 7c 03 	sts	0x037C, r24
+     584:	43 e0       	ldi	r20, 0x03	; 3
+     586:	50 e0       	ldi	r21, 0x00	; 0
+     588:	6d ea       	ldi	r22, 0xAD	; 173
+     58a:	71 e0       	ldi	r23, 0x01	; 1
+     58c:	88 e6       	ldi	r24, 0x68	; 104
+     58e:	93 e0       	ldi	r25, 0x03	; 3
+     590:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+     594:	40 91 7c 03 	lds	r20, 0x037C
+			doublequote_loc++; // Increment doublequote_loc to get the index of the First character in <data> which comes after <LF>='\n'
+			// Obtain the received SMS message which is ended by 0x1A=<Ctrl+Z>
+			
+			LCD_Clear();
+     598:	50 e0       	ldi	r21, 0x00	; 0
+     59a:	68 e6       	ldi	r22, 0x68	; 104
+			LCD_Command(0xC0);
+     59c:	73 e0       	ldi	r23, 0x03	; 3
+     59e:	80 e9       	ldi	r24, 0x90	; 144
+     5a0:	90 e0       	ldi	r25, 0x00	; 0
+			LCD_Char((doublequote_loc/10) +48);
+     5a2:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     5a6:	89 2b       	or	r24, r25
+     5a8:	19 f7       	brne	.-58     	; 0x570 <BEARERconfiguration+0x24>
+     5aa:	8a e3       	ldi	r24, 0x3A	; 58
+     5ac:	91 e0       	ldi	r25, 0x01	; 1
+     5ae:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+     5b2:	80 e9       	ldi	r24, 0x90	; 144
+     5b4:	90 e0       	ldi	r25, 0x00	; 0
+     5b6:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+			LCD_Char((doublequote_loc%10) +48);
+     5ba:	80 93 7c 03 	sts	0x037C, r24
+     5be:	43 e0       	ldi	r20, 0x03	; 3
+     5c0:	50 e0       	ldi	r21, 0x00	; 0
+     5c2:	6d ea       	ldi	r22, 0xAD	; 173
+     5c4:	71 e0       	ldi	r23, 0x01	; 1
+     5c6:	88 e6       	ldi	r24, 0x68	; 104
+     5c8:	93 e0       	ldi	r25, 0x03	; 3
+     5ca:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+     5ce:	40 91 7c 03 	lds	r20, 0x037C
+     5d2:	50 e0       	ldi	r21, 0x00	; 0
+     5d4:	68 e6       	ldi	r22, 0x68	; 104
+     5d6:	73 e0       	ldi	r23, 0x03	; 3
+     5d8:	80 e9       	ldi	r24, 0x90	; 144
+     5da:	90 e0       	ldi	r25, 0x00	; 0
+     5dc:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+			_delay_ms(1200);
+			
+			for (RXsmsMESSAGE_length=0; doublequote_loc <= len; RXsmsMESSAGE_length++, doublequote_loc++)	{ RXsmsMESSAGE[RXsmsMESSAGE_length]=RXsmsResponse[doublequote_loc]; };
+     5e0:	89 2b       	or	r24, r25
+     5e2:	19 f7       	brne	.-58     	; 0x5aa <BEARERconfiguration+0x5e>
+     5e4:	8b e1       	ldi	r24, 0x1B	; 27
+     5e6:	91 e0       	ldi	r25, 0x01	; 1
+     5e8:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+     5ec:	80 e9       	ldi	r24, 0x90	; 144
+     5ee:	90 e0       	ldi	r25, 0x00	; 0
+     5f0:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     5f4:	80 93 7c 03 	sts	0x037C, r24
+     5f8:	43 e0       	ldi	r20, 0x03	; 3
+     5fa:	50 e0       	ldi	r21, 0x00	; 0
+     5fc:	6d ea       	ldi	r22, 0xAD	; 173
+     5fe:	71 e0       	ldi	r23, 0x01	; 1
+     600:	88 e6       	ldi	r24, 0x68	; 104
+     602:	93 e0       	ldi	r25, 0x03	; 3
+     604:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+     608:	40 91 7c 03 	lds	r20, 0x037C
+			RXsmsMESSAGE[RXsmsMESSAGE_length]='\0'; // Terminate the received message array with NULL='\0' character
+     60c:	50 e0       	ldi	r21, 0x00	; 0
+     60e:	68 e6       	ldi	r22, 0x68	; 104
+     610:	73 e0       	ldi	r23, 0x03	; 3
+     612:	80 e9       	ldi	r24, 0x90	; 144
+     614:	90 e0       	ldi	r25, 0x00	; 0
+     616:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+			LCD_Clear();
+     61a:	89 2b       	or	r24, r25
+			LCD_String(RXsmsMESSAGE);
+     61c:	19 f7       	brne	.-58     	; 0x5e4 <BEARERconfiguration+0x98>
+     61e:	8d ef       	ldi	r24, 0xFD	; 253
+     620:	90 e0       	ldi	r25, 0x00	; 0
+     622:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+			LCD_Command(0xC0);
+     626:	80 e9       	ldi	r24, 0x90	; 144
+     628:	90 e0       	ldi	r25, 0x00	; 0
+			LCD_Char(RXsmsMESSAGE_length/10 +48);
+     62a:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     62e:	80 93 7c 03 	sts	0x037C, r24
+     632:	43 e0       	ldi	r20, 0x03	; 3
+     634:	50 e0       	ldi	r21, 0x00	; 0
+     636:	6d ea       	ldi	r22, 0xAD	; 173
+     638:	71 e0       	ldi	r23, 0x01	; 1
+     63a:	88 e6       	ldi	r24, 0x68	; 104
+     63c:	93 e0       	ldi	r25, 0x03	; 3
+     63e:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+			LCD_Char(RXsmsMESSAGE_length%10 +48);
+     642:	40 91 7c 03 	lds	r20, 0x037C
+     646:	50 e0       	ldi	r21, 0x00	; 0
+     648:	68 e6       	ldi	r22, 0x68	; 104
+     64a:	73 e0       	ldi	r23, 0x03	; 3
+     64c:	80 e9       	ldi	r24, 0x90	; 144
+     64e:	90 e0       	ldi	r25, 0x00	; 0
+     650:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     654:	89 2b       	or	r24, r25
+     656:	19 f7       	brne	.-58     	; 0x61e <BEARERconfiguration+0xd2>
+     658:	11 30       	cpi	r17, 0x01	; 1
+     65a:	09 f0       	breq	.+2      	; 0x65e <BEARERconfiguration+0x112>
+     65c:	52 c0       	rjmp	.+164    	; 0x702 <BEARERconfiguration+0x1b6>
+     65e:	8e ee       	ldi	r24, 0xEE	; 238
+     660:	90 e0       	ldi	r25, 0x00	; 0
+     662:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+     666:	80 e9       	ldi	r24, 0x90	; 144
+     668:	90 e0       	ldi	r25, 0x00	; 0
+     66a:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     66e:	80 93 7c 03 	sts	0x037C, r24
+     672:	43 e0       	ldi	r20, 0x03	; 3
+     674:	50 e0       	ldi	r21, 0x00	; 0
+			SMSERROR=0;
+		};
+	} while ((RXSMS ==0) && (SMSERROR==0));
+	
+	
+	if (SMS2TEXTmode && RXSMSTEST && RXSMS ){ return(1);}
+     676:	6d ea       	ldi	r22, 0xAD	; 173
+     678:	71 e0       	ldi	r23, 0x01	; 1
+			LCD_Char(RXsmsMESSAGE_length/10 +48);
+			LCD_Char(RXsmsMESSAGE_length%10 +48);
+			_delay_ms(1200);
+			
+		}
+		else if (strncmp((const char *)RXsmsPREFIX, "+CMS ERROR", colon_location)==0)
+     67a:	88 e6       	ldi	r24, 0x68	; 104
+     67c:	93 e0       	ldi	r25, 0x03	; 3
+     67e:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+     682:	40 91 7c 03 	lds	r20, 0x037C
+     686:	50 e0       	ldi	r21, 0x00	; 0
+		{
+			// where there is NO ERROR and the SMS is NOT RECEIVED, the RECEIVED SMS procedure need to be looped again
+			RXSMS=0;
+			SMSERROR=0;
+		};
+	} while ((RXSMS ==0) && (SMSERROR==0));
+     688:	68 e6       	ldi	r22, 0x68	; 104
+     68a:	73 e0       	ldi	r23, 0x03	; 3
+     68c:	80 e9       	ldi	r24, 0x90	; 144
+	
+	
+	if (SMS2TEXTmode && RXSMSTEST && RXSMS ){ return(1);}
+	else {return (0);};
+     68e:	90 e0       	ldi	r25, 0x00	; 0
+     690:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+		
+		
+		// copy the ATresponse to smsATresponse which is: +CMGR: <x>,<x>,<xxx> or +CMS ERROR: <err>
+		for (colon_location=0; RXsmsResponse[colon_location] !=':'; colon_location++) {RXsmsPREFIX[colon_location]=RXsmsResponse[colon_location];};
+		
+		LCD_Clear();
+     694:	00 97       	sbiw	r24, 0x00	; 0
+		LCD_String(RXsmsPREFIX);
+     696:	19 f7       	brne	.-58     	; 0x65e <BEARERconfiguration+0x112>
+     698:	b8 2e       	mov	r11, r24
+     69a:	c9 2e       	mov	r12, r25
+     69c:	d1 2c       	mov	r13, r1
+		LCD_Command(0xC0);
+     69e:	8e 01       	movw	r16, r28
+     6a0:	0f 5f       	subi	r16, 0xFF	; 255
+     6a2:	1f 4f       	sbci	r17, 0xFF	; 255
+		LCD_Char(colon_location/10 +48);
+     6a4:	e0 2e       	mov	r14, r16
+     6a6:	f1 2e       	mov	r15, r17
+     6a8:	8f ed       	ldi	r24, 0xDF	; 223
+		LCD_Char(colon_location%10 +48);
+     6aa:	90 e0       	ldi	r25, 0x00	; 0
+     6ac:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+     6b0:	80 e9       	ldi	r24, 0x90	; 144
+     6b2:	90 e0       	ldi	r25, 0x00	; 0
+     6b4:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     6b8:	80 93 7c 03 	sts	0x037C, r24
+     6bc:	80 91 90 00 	lds	r24, 0x0090
+     6c0:	8a 33       	cpi	r24, 0x3A	; 58
+		_delay_ms(1200);
+		
+		
+		
+		// copy the ATresponse to smsATresponse which is: +CMGR: <x>,<x>,<xxx> or +CMS ERROR: <err>
+		for (colon_location=0; RXsmsResponse[colon_location] !=':'; colon_location++) {RXsmsPREFIX[colon_location]=RXsmsResponse[colon_location];};
+     6c2:	09 f4       	brne	.+2      	; 0x6c6 <BEARERconfiguration+0x17a>
+     6c4:	40 c0       	rjmp	.+128    	; 0x746 <BEARERconfiguration+0x1fa>
+	
+	
+	if (SMS2TEXTmode && RXSMSTEST && RXSMS ){ return(1);}
+	else {return (0);};
+
+}// END OF uint8_t RxSMSviaSIM800L(uint8_t smsINDEX)
+     6c6:	2b 2d       	mov	r18, r11
+     6c8:	3c 2d       	mov	r19, r12
+     6ca:	4d 2d       	mov	r20, r13
+     6cc:	f9 01       	movw	r30, r18
+     6ce:	e0 57       	subi	r30, 0x70	; 112
+     6d0:	ff 4f       	sbci	r31, 0xFF	; 255
+     6d2:	80 81       	ld	r24, Z
+     6d4:	f8 01       	movw	r30, r16
+     6d6:	e2 0f       	add	r30, r18
+     6d8:	f3 1f       	adc	r31, r19
+     6da:	80 83       	st	Z, r24
+     6dc:	4f 5f       	subi	r20, 0xFF	; 255
+     6de:	24 2f       	mov	r18, r20
+     6e0:	30 e0       	ldi	r19, 0x00	; 0
+     6e2:	f9 01       	movw	r30, r18
+     6e4:	e0 57       	subi	r30, 0x70	; 112
+     6e6:	ff 4f       	sbci	r31, 0xFF	; 255
+     6e8:	80 81       	ld	r24, Z
+     6ea:	8a 33       	cpi	r24, 0x3A	; 58
+     6ec:	79 f7       	brne	.-34     	; 0x6cc <BEARERconfiguration+0x180>
+     6ee:	a9 01       	movw	r20, r18
+     6f0:	6b e0       	ldi	r22, 0x0B	; 11
+     6f2:	71 e0       	ldi	r23, 0x01	; 1
+     6f4:	8e 2d       	mov	r24, r14
+     6f6:	9f 2d       	mov	r25, r15
+     6f8:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+			UART_TxStringfromPROGMEM(SAPBRQUERY);	// {"AT+SAPBR=2,1\r\n"}; query IP bearer
+			ATresponse_length = UART_RxString(ATresponse);	// Receive the response of SIM800L in "ATresponse" and its length "ATresponse_length"
+			// The response is as: +SAPBR: 1,1,"10.89.193.1"
+			
+			for (colon_location=0; ATresponse[colon_location]!=':'; colon_location++) { IPqueryresponse[colon_location]=ATresponse[colon_location];}; // locate the colon ':' in the ATresponse
+			if (strncmp((const char *)IPqueryresponse, (const char *)"+SAPBR", colon_location)==0) {IPQuery=1;};
+     6fc:	89 2b       	or	r24, r25
+     6fe:	a1 f6       	brne	.-88     	; 0x6a8 <BEARERconfiguration+0x15c>
+     700:	22 c0       	rjmp	.+68     	; 0x746 <BEARERconfiguration+0x1fa>
+		} while (IPQuery !=1);
+		
+	}
+	else if (GPRS_config==0)
+     702:	11 11       	cpse	r17, r1
+     704:	1e c0       	rjmp	.+60     	; 0x742 <BEARERconfiguration+0x1f6>
+	{
+		//----------------------------------------- CLOSE IP bearer --------------------------------------------------------------------
+		do
+		{
+			UART_TxStringfromPROGMEM(SAPBRCLOSE);	// {"AT+SAPBR=0,1\r\n"}; Close IP bearer
+     706:	80 ed       	ldi	r24, 0xD0	; 208
+     708:	90 e0       	ldi	r25, 0x00	; 0
+     70a:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+			ATresponse_length = UART_RxString(ATresponse);	// Receive the response of SIM800L in "ATresponse" and its length "ATresponse_length"
+     70e:	80 e9       	ldi	r24, 0x90	; 144
+     710:	90 e0       	ldi	r25, 0x00	; 0
+     712:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     716:	80 93 7c 03 	sts	0x037C, r24
+			memcpy_P(bufMEM, ISOK, sizeof(ISOK)); //copy the Memory content i.e. OK to the memory buffer
+     71a:	43 e0       	ldi	r20, 0x03	; 3
+     71c:	50 e0       	ldi	r21, 0x00	; 0
+     71e:	6d ea       	ldi	r22, 0xAD	; 173
+     720:	71 e0       	ldi	r23, 0x01	; 1
+     722:	88 e6       	ldi	r24, 0x68	; 104
+     724:	93 e0       	ldi	r25, 0x03	; 3
+     726:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+			if (strncmp((const char *)ATresponse, (const char *)bufMEM, ATresponse_length)==0) {IPConfig=1;};
+     72a:	40 91 7c 03 	lds	r20, 0x037C
+     72e:	50 e0       	ldi	r21, 0x00	; 0
+     730:	68 e6       	ldi	r22, 0x68	; 104
+     732:	73 e0       	ldi	r23, 0x03	; 3
+     734:	80 e9       	ldi	r24, 0x90	; 144
+     736:	90 e0       	ldi	r25, 0x00	; 0
+     738:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     73c:	89 2b       	or	r24, r25
+     73e:	19 f0       	breq	.+6      	; 0x746 <BEARERconfiguration+0x1fa>
+     740:	e2 cf       	rjmp	.-60     	; 0x706 <BEARERconfiguration+0x1ba>
+		} while (IPConfig !=1);
+
+	}
+	
+	if (GPRScon && APNname && USERname && PassWRD && IPConfig) { return (1);} 
+	else { return (0);}
+     742:	80 e0       	ldi	r24, 0x00	; 0
+     744:	01 c0       	rjmp	.+2      	; 0x748 <BEARERconfiguration+0x1fc>
+			if (strncmp((const char *)ATresponse, (const char *)bufMEM, ATresponse_length)==0) {IPConfig=1;};
+		} while (IPConfig !=1);
+
+	}
+	
+	if (GPRScon && APNname && USERname && PassWRD && IPConfig) { return (1);} 
+     746:	81 e0       	ldi	r24, 0x01	; 1
+	else { return (0);}
+
+	
+}// END of BEARER Configuration function 
+     748:	2c 96       	adiw	r28, 0x0c	; 12
+     74a:	0f b6       	in	r0, 0x3f	; 63
+     74c:	f8 94       	cli
+     74e:	de bf       	out	0x3e, r29	; 62
+     750:	0f be       	out	0x3f, r0	; 63
+     752:	cd bf       	out	0x3d, r28	; 61
+     754:	df 91       	pop	r29
+     756:	cf 91       	pop	r28
+     758:	1f 91       	pop	r17
+     75a:	0f 91       	pop	r16
+     75c:	ff 90       	pop	r15
+     75e:	ef 90       	pop	r14
+     760:	df 90       	pop	r13
+     762:	cf 90       	pop	r12
+     764:	bf 90       	pop	r11
+     766:	08 95       	ret
+
+00000768 <HTTPsetup>:
+				4. Set HTTP Parameters Value "URL": {"AT+HTTPPARA=\"URL\",\"http://maps.google.com/maps?q=\"\r\n"};  (Mandatory Parameter) HTTP client URL
+				
+***************************************************************************************************/	
+	
+uint8_t HTTPsetup(void)
+{
+     768:	8f 92       	push	r8
+     76a:	9f 92       	push	r9
+     76c:	af 92       	push	r10
+     76e:	bf 92       	push	r11
+     770:	cf 92       	push	r12
+     772:	df 92       	push	r13
+     774:	ef 92       	push	r14
+     776:	ff 92       	push	r15
+     778:	0f 93       	push	r16
+     77a:	1f 93       	push	r17
+     77c:	cf 93       	push	r28
+     77e:	df 93       	push	r29
+     780:	cd b7       	in	r28, 0x3d	; 61
+     782:	de b7       	in	r29, 0x3e	; 62
+     784:	a4 97       	sbiw	r28, 0x24	; 36
+     786:	0f b6       	in	r0, 0x3f	; 63
+     788:	f8 94       	cli
+     78a:	de bf       	out	0x3e, r29	; 62
+     78c:	0f be       	out	0x3f, r0	; 63
+     78e:	cd bf       	out	0x3d, r28	; 61
+	
+	//-------------------------------  Initialize HTTP Service TEST i.e. -----------------------------------
+	HTTPserver_TEST=0;
+	do
+	{
+		UART_TxStringfromPROGMEM(HTTPSERVERTEST);	// {"AT+HTTPINIT=?\r\n"}; // AT+HTTPINIT Initialize HTTP Service TEST
+     790:	80 ec       	ldi	r24, 0xC0	; 192
+     792:	90 e0       	ldi	r25, 0x00	; 0
+     794:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+		ATresponse_length = UART_RxString(ATresponse);	// Receive the response of SIM800L in "ATresponse" and its length "ATresponse_length"
+     798:	80 e9       	ldi	r24, 0x90	; 144
+     79a:	90 e0       	ldi	r25, 0x00	; 0
+     79c:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     7a0:	80 93 7c 03 	sts	0x037C, r24
+		memcpy_P(bufMEM, ISOK, sizeof(ISOK)); //copy the Memory content i.e. OK to the memory buffer
+     7a4:	43 e0       	ldi	r20, 0x03	; 3
+     7a6:	50 e0       	ldi	r21, 0x00	; 0
+     7a8:	6d ea       	ldi	r22, 0xAD	; 173
+     7aa:	71 e0       	ldi	r23, 0x01	; 1
+     7ac:	88 e6       	ldi	r24, 0x68	; 104
+     7ae:	93 e0       	ldi	r25, 0x03	; 3
+     7b0:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+		if (strncmp((const char *)ATresponse, (const char *)bufMEM, ATresponse_length)==0) {HTTPserver_TEST=1;};
+     7b4:	40 91 7c 03 	lds	r20, 0x037C
+     7b8:	50 e0       	ldi	r21, 0x00	; 0
+     7ba:	68 e6       	ldi	r22, 0x68	; 104
+     7bc:	73 e0       	ldi	r23, 0x03	; 3
+     7be:	80 e9       	ldi	r24, 0x90	; 144
+     7c0:	90 e0       	ldi	r25, 0x00	; 0
+     7c2:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     7c6:	8c 01       	movw	r16, r24
+     7c8:	00 97       	sbiw	r24, 0x00	; 0
+     7ca:	11 f7       	brne	.-60     	; 0x790 <HTTPsetup+0x28>
+		}
+		else
+		{
+			// If the response is NOT "OK" then check for ME FUNCTIONALITY ERROR: +CME ERROR: <err>
+			
+			for (colon_location=0; ATresponse[colon_location]!=':'; colon_location++) { httpINITrespnse[colon_location]=ATresponse[colon_location];}; // locate the colon ':' in the ATresponse
+     7cc:	98 2e       	mov	r9, r24
+     7ce:	a1 2e       	mov	r10, r17
+     7d0:	b1 2c       	mov	r11, r1
+     7d2:	ce 01       	movw	r24, r28
+     7d4:	01 96       	adiw	r24, 0x01	; 1
+     7d6:	7c 01       	movw	r14, r24
+     7d8:	c8 2e       	mov	r12, r24
+     7da:	df 2c       	mov	r13, r15
+	
+	httpINIT=0;
+	httpINITERROR=0;
+	do
+	{
+		UART_TxStringfromPROGMEM(HTTPSERVERINIT);	// {"AT+HTTPINIT,1\r\n"}; (Mandatory Parameter) Bearer profile identifier
+     7dc:	82 eb       	ldi	r24, 0xB2	; 178
+     7de:	90 e0       	ldi	r25, 0x00	; 0
+     7e0:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+		ATresponse_length = UART_RxString(ATresponse);	// Receive the response of SIM800L in "ATresponse" and its length "ATresponse_length"
+     7e4:	80 e9       	ldi	r24, 0x90	; 144
+     7e6:	90 e0       	ldi	r25, 0x00	; 0
+     7e8:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     7ec:	80 93 7c 03 	sts	0x037C, r24
+
+		memcpy_P(bufMEM, ISOK, sizeof(ISOK));			//copy the Memory content to the memory buffer
+     7f0:	43 e0       	ldi	r20, 0x03	; 3
+     7f2:	50 e0       	ldi	r21, 0x00	; 0
+     7f4:	6d ea       	ldi	r22, 0xAD	; 173
+     7f6:	71 e0       	ldi	r23, 0x01	; 1
+     7f8:	88 e6       	ldi	r24, 0x68	; 104
+     7fa:	93 e0       	ldi	r25, 0x03	; 3
+     7fc:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+		if (strncmp((const char *)ATresponse, (const char *)bufMEM, ATresponse_length)==0)
+     800:	40 91 7c 03 	lds	r20, 0x037C
+     804:	50 e0       	ldi	r21, 0x00	; 0
+     806:	68 e6       	ldi	r22, 0x68	; 104
+     808:	73 e0       	ldi	r23, 0x03	; 3
+     80a:	80 e9       	ldi	r24, 0x90	; 144
+     80c:	90 e0       	ldi	r25, 0x00	; 0
+     80e:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     812:	89 2b       	or	r24, r25
+     814:	11 f1       	breq	.+68     	; 0x85a <HTTPsetup+0xf2>
+		}
+		else
+		{
+			// If the response is NOT "OK" then check for ME FUNCTIONALITY ERROR: +CME ERROR: <err>
+			
+			for (colon_location=0; ATresponse[colon_location]!=':'; colon_location++) { httpINITrespnse[colon_location]=ATresponse[colon_location];}; // locate the colon ':' in the ATresponse
+     816:	80 91 90 00 	lds	r24, 0x0090
+     81a:	8a 33       	cpi	r24, 0x3A	; 58
+     81c:	09 f1       	breq	.+66     	; 0x860 <__stack+0x1>
+     81e:	29 2d       	mov	r18, r9
+     820:	3a 2d       	mov	r19, r10
+     822:	4b 2d       	mov	r20, r11
+     824:	f9 01       	movw	r30, r18
+     826:	e0 57       	subi	r30, 0x70	; 112
+     828:	ff 4f       	sbci	r31, 0xFF	; 255
+     82a:	80 81       	ld	r24, Z
+     82c:	f7 01       	movw	r30, r14
+     82e:	e2 0f       	add	r30, r18
+     830:	f3 1f       	adc	r31, r19
+     832:	80 83       	st	Z, r24
+     834:	4f 5f       	subi	r20, 0xFF	; 255
+     836:	24 2f       	mov	r18, r20
+     838:	30 e0       	ldi	r19, 0x00	; 0
+     83a:	f9 01       	movw	r30, r18
+     83c:	e0 57       	subi	r30, 0x70	; 112
+     83e:	ff 4f       	sbci	r31, 0xFF	; 255
+     840:	80 81       	ld	r24, Z
+     842:	8a 33       	cpi	r24, 0x3A	; 58
+     844:	79 f7       	brne	.-34     	; 0x824 <HTTPsetup+0xbc>
+			if (strncmp((const char *)httpINITrespnse, (const char *)"+CME ERROR", colon_location)==0)
+     846:	a9 01       	movw	r20, r18
+     848:	60 e0       	ldi	r22, 0x00	; 0
+     84a:	71 e0       	ldi	r23, 0x01	; 1
+     84c:	8c 2d       	mov	r24, r12
+     84e:	9d 2d       	mov	r25, r13
+     850:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+				httpINIT=0;
+				httpINITERROR=0;
+			};
+		};
+		
+	} while ((httpINIT ==0) && (httpINITERROR==0));
+     854:	89 2b       	or	r24, r25
+     856:	11 f6       	brne	.-124    	; 0x7dc <HTTPsetup+0x74>
+     858:	05 c0       	rjmp	.+10     	; 0x864 <__stack+0x5>
+
+		memcpy_P(bufMEM, ISOK, sizeof(ISOK));			//copy the Memory content to the memory buffer
+		if (strncmp((const char *)ATresponse, (const char *)bufMEM, ATresponse_length)==0)
+		{
+			//When the response of Write Command "AT+HTTPINIT" is "OK"
+			httpINIT=1;
+     85a:	aa 24       	eor	r10, r10
+     85c:	a3 94       	inc	r10
+     85e:	03 c0       	rjmp	.+6      	; 0x866 <__stack+0x7>
+			
+			for (colon_location=0; ATresponse[colon_location]!=':'; colon_location++) { httpINITrespnse[colon_location]=ATresponse[colon_location];}; // locate the colon ':' in the ATresponse
+			if (strncmp((const char *)httpINITrespnse, (const char *)"+CME ERROR", colon_location)==0)
+			{
+				// If error is related to ME functionality, the response is as: +CME ERROR: <err>
+				httpINIT=0;
+     860:	a1 2c       	mov	r10, r1
+     862:	01 c0       	rjmp	.+2      	; 0x866 <__stack+0x7>
+     864:	a1 2c       	mov	r10, r1
+		}
+		else
+		{
+			// If the response is NOT "OK" then check for ME FUNCTIONALITY ERROR: +CME ERROR: <err>
+			
+			for (colon_location=0; ATresponse[colon_location]!=':'; colon_location++) { httpCIDrespnse[colon_location]=ATresponse[colon_location];}; // locate the colon ':' in the ATresponse
+     866:	80 2e       	mov	r8, r16
+     868:	91 2e       	mov	r9, r17
+     86a:	b1 2c       	mov	r11, r1
+     86c:	7e 01       	movw	r14, r28
+     86e:	9d e0       	ldi	r25, 0x0D	; 13
+     870:	e9 0e       	add	r14, r25
+     872:	f1 1c       	adc	r15, r1
+     874:	ce 2c       	mov	r12, r14
+     876:	df 2c       	mov	r13, r15
+	//----------------Set HTTP Parameters Value: 1. "CID": (Mandatory Parameter) Bearer profile identifier -----------------------------
+	httpCID=0;
+	httpCIDERROR=0;
+	do
+	{
+		UART_TxStringfromPROGMEM(HTTPPARACID);	// {"AT+HTTPPARA=\"CID\",1\r\n"}; (Mandatory Parameter) Bearer profile identifier
+     878:	8c e9       	ldi	r24, 0x9C	; 156
+     87a:	90 e0       	ldi	r25, 0x00	; 0
+     87c:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+		ATresponse_length = UART_RxString(ATresponse);	// Receive the response of SIM800L in "ATresponse" and its length "ATresponse_length"
+     880:	80 e9       	ldi	r24, 0x90	; 144
+     882:	90 e0       	ldi	r25, 0x00	; 0
+     884:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     888:	80 93 7c 03 	sts	0x037C, r24
+
+		memcpy_P(bufMEM, ISOK, sizeof(ISOK));			//copy the Memory content to the memory buffer
+     88c:	43 e0       	ldi	r20, 0x03	; 3
+     88e:	50 e0       	ldi	r21, 0x00	; 0
+     890:	6d ea       	ldi	r22, 0xAD	; 173
+     892:	71 e0       	ldi	r23, 0x01	; 1
+     894:	88 e6       	ldi	r24, 0x68	; 104
+     896:	93 e0       	ldi	r25, 0x03	; 3
+     898:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+		if (strncmp((const char *)ATresponse, (const char *)bufMEM, ATresponse_length)==0)
+     89c:	40 91 7c 03 	lds	r20, 0x037C
+     8a0:	50 e0       	ldi	r21, 0x00	; 0
+     8a2:	68 e6       	ldi	r22, 0x68	; 104
+     8a4:	73 e0       	ldi	r23, 0x03	; 3
+     8a6:	80 e9       	ldi	r24, 0x90	; 144
+     8a8:	90 e0       	ldi	r25, 0x00	; 0
+     8aa:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     8ae:	89 2b       	or	r24, r25
+     8b0:	11 f1       	breq	.+68     	; 0x8f6 <__stack+0x97>
+		}
+		else
+		{
+			// If the response is NOT "OK" then check for ME FUNCTIONALITY ERROR: +CME ERROR: <err>
+			
+			for (colon_location=0; ATresponse[colon_location]!=':'; colon_location++) { httpCIDrespnse[colon_location]=ATresponse[colon_location];}; // locate the colon ':' in the ATresponse
+     8b2:	80 91 90 00 	lds	r24, 0x0090
+     8b6:	8a 33       	cpi	r24, 0x3A	; 58
+     8b8:	09 f1       	breq	.+66     	; 0x8fc <__stack+0x9d>
+     8ba:	28 2d       	mov	r18, r8
+     8bc:	39 2d       	mov	r19, r9
+     8be:	4b 2d       	mov	r20, r11
+     8c0:	f9 01       	movw	r30, r18
+     8c2:	e0 57       	subi	r30, 0x70	; 112
+     8c4:	ff 4f       	sbci	r31, 0xFF	; 255
+     8c6:	80 81       	ld	r24, Z
+     8c8:	f7 01       	movw	r30, r14
+     8ca:	e2 0f       	add	r30, r18
+     8cc:	f3 1f       	adc	r31, r19
+     8ce:	80 83       	st	Z, r24
+     8d0:	4f 5f       	subi	r20, 0xFF	; 255
+     8d2:	24 2f       	mov	r18, r20
+     8d4:	30 e0       	ldi	r19, 0x00	; 0
+     8d6:	f9 01       	movw	r30, r18
+     8d8:	e0 57       	subi	r30, 0x70	; 112
+     8da:	ff 4f       	sbci	r31, 0xFF	; 255
+     8dc:	80 81       	ld	r24, Z
+     8de:	8a 33       	cpi	r24, 0x3A	; 58
+     8e0:	79 f7       	brne	.-34     	; 0x8c0 <__stack+0x61>
+			if (strncmp((const char *)httpCIDrespnse, (const char *)"+CME ERROR", colon_location)==0)
+     8e2:	a9 01       	movw	r20, r18
+     8e4:	60 e0       	ldi	r22, 0x00	; 0
+     8e6:	71 e0       	ldi	r23, 0x01	; 1
+     8e8:	8c 2d       	mov	r24, r12
+     8ea:	9d 2d       	mov	r25, r13
+     8ec:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+				httpCIDERROR=0;
+				httpCID=0;
+			};
+		};
+		
+	} while ((httpCID ==0) && (httpCIDERROR==0));
+     8f0:	89 2b       	or	r24, r25
+     8f2:	11 f6       	brne	.-124    	; 0x878 <__stack+0x19>
+     8f4:	05 c0       	rjmp	.+10     	; 0x900 <__stack+0xa1>
+		memcpy_P(bufMEM, ISOK, sizeof(ISOK));			//copy the Memory content to the memory buffer
+		if (strncmp((const char *)ATresponse, (const char *)bufMEM, ATresponse_length)==0)
+		{
+			//When the response of Write Command "AT+HTTPPARA=\"CID\",1 is "OK"
+			httpCIDERROR=0;
+			httpCID=1;
+     8f6:	99 24       	eor	r9, r9
+     8f8:	93 94       	inc	r9
+     8fa:	03 c0       	rjmp	.+6      	; 0x902 <__stack+0xa3>
+			for (colon_location=0; ATresponse[colon_location]!=':'; colon_location++) { httpCIDrespnse[colon_location]=ATresponse[colon_location];}; // locate the colon ':' in the ATresponse
+			if (strncmp((const char *)httpCIDrespnse, (const char *)"+CME ERROR", colon_location)==0)
+			{
+				// If error is related to ME functionality, the response is as: +CME ERROR: <err>
+				httpCIDERROR=1;
+				httpCID=0;
+     8fc:	91 2c       	mov	r9, r1
+     8fe:	01 c0       	rjmp	.+2      	; 0x902 <__stack+0xa3>
+     900:	91 2c       	mov	r9, r1
+		}
+		else
+		{
+			// If the response is NOT "OK" then check for ME FUNCTIONALITY ERROR: +CME ERROR: <err>
+			
+			for (colon_location=0; ATresponse[colon_location]!=':'; colon_location++) { httpURLrespnse[colon_location]=ATresponse[colon_location];}; // locate the colon ':' in the ATresponse
+     902:	b0 2e       	mov	r11, r16
+     904:	c1 2e       	mov	r12, r17
+     906:	d1 2c       	mov	r13, r1
+     908:	8e 01       	movw	r16, r28
+     90a:	07 5e       	subi	r16, 0xE7	; 231
+     90c:	1f 4f       	sbci	r17, 0xFF	; 255
+     90e:	e0 2e       	mov	r14, r16
+     910:	f1 2e       	mov	r15, r17
+	//----------------Set HTTP Parameters Value: 2. "URL": (Mandatory Parameter) HTTP client URL -----------------------------
+	httpURL=0;
+	httpURLERROR=0;
+	do
+	{
+		UART_TxStringfromPROGMEM(HTTPPARAURL);	// {"AT+HTTPPARA=\"URL\",\"http://maps.google.com/maps?q=\"\r\n"};  (Mandatory Parameter) HTTP client URL
+     912:	87 e6       	ldi	r24, 0x67	; 103
+     914:	90 e0       	ldi	r25, 0x00	; 0
+     916:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+		ATresponse_length = UART_RxString(ATresponse);	// Receive the response of SIM800L in "ATresponse" and its length "ATresponse_length"
+     91a:	80 e9       	ldi	r24, 0x90	; 144
+     91c:	90 e0       	ldi	r25, 0x00	; 0
+     91e:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     922:	80 93 7c 03 	sts	0x037C, r24
+
+		memcpy_P(bufMEM, ISOK, sizeof(ISOK));			//copy the Memory content to the memory buffer
+     926:	43 e0       	ldi	r20, 0x03	; 3
+     928:	50 e0       	ldi	r21, 0x00	; 0
+     92a:	6d ea       	ldi	r22, 0xAD	; 173
+     92c:	71 e0       	ldi	r23, 0x01	; 1
+     92e:	88 e6       	ldi	r24, 0x68	; 104
+     930:	93 e0       	ldi	r25, 0x03	; 3
+     932:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <memcpy_P>
+		if (strncmp((const char *)ATresponse, (const char *)bufMEM, ATresponse_length)==0)
+     936:	40 91 7c 03 	lds	r20, 0x037C
+     93a:	50 e0       	ldi	r21, 0x00	; 0
+     93c:	68 e6       	ldi	r22, 0x68	; 104
+     93e:	73 e0       	ldi	r23, 0x03	; 3
+     940:	80 e9       	ldi	r24, 0x90	; 144
+     942:	90 e0       	ldi	r25, 0x00	; 0
+     944:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     948:	89 2b       	or	r24, r25
+     94a:	11 f1       	breq	.+68     	; 0x990 <__stack+0x131>
+		}
+		else
+		{
+			// If the response is NOT "OK" then check for ME FUNCTIONALITY ERROR: +CME ERROR: <err>
+			
+			for (colon_location=0; ATresponse[colon_location]!=':'; colon_location++) { httpURLrespnse[colon_location]=ATresponse[colon_location];}; // locate the colon ':' in the ATresponse
+     94c:	80 91 90 00 	lds	r24, 0x0090
+     950:	8a 33       	cpi	r24, 0x3A	; 58
+     952:	01 f1       	breq	.+64     	; 0x994 <__stack+0x135>
+     954:	2b 2d       	mov	r18, r11
+     956:	3c 2d       	mov	r19, r12
+     958:	4d 2d       	mov	r20, r13
+     95a:	f9 01       	movw	r30, r18
+     95c:	e0 57       	subi	r30, 0x70	; 112
+     95e:	ff 4f       	sbci	r31, 0xFF	; 255
+     960:	80 81       	ld	r24, Z
+     962:	f8 01       	movw	r30, r16
+     964:	e2 0f       	add	r30, r18
+     966:	f3 1f       	adc	r31, r19
+     968:	80 83       	st	Z, r24
+     96a:	4f 5f       	subi	r20, 0xFF	; 255
+     96c:	24 2f       	mov	r18, r20
+     96e:	30 e0       	ldi	r19, 0x00	; 0
+     970:	f9 01       	movw	r30, r18
+     972:	e0 57       	subi	r30, 0x70	; 112
+     974:	ff 4f       	sbci	r31, 0xFF	; 255
+     976:	80 81       	ld	r24, Z
+     978:	8a 33       	cpi	r24, 0x3A	; 58
+     97a:	79 f7       	brne	.-34     	; 0x95a <__stack+0xfb>
+			if (strncmp((const char *)httpURLrespnse, (const char *)"+CME ERROR", colon_location)==0)
+     97c:	a9 01       	movw	r20, r18
+     97e:	60 e0       	ldi	r22, 0x00	; 0
+     980:	71 e0       	ldi	r23, 0x01	; 1
+     982:	8e 2d       	mov	r24, r14
+     984:	9f 2d       	mov	r25, r15
+     986:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+				httpURLERROR=0;
+				httpURL=0;
+			};
+		};
+		
+	} while ((httpURL==0) && (httpURLERROR==0));
+     98a:	89 2b       	or	r24, r25
+     98c:	11 f6       	brne	.-124    	; 0x912 <__stack+0xb3>
+     98e:	04 c0       	rjmp	.+8      	; 0x998 <__stack+0x139>
+		memcpy_P(bufMEM, ISOK, sizeof(ISOK));			//copy the Memory content to the memory buffer
+		if (strncmp((const char *)ATresponse, (const char *)bufMEM, ATresponse_length)==0)
+		{
+			//When the response of Write Command "AT+HTTPPARA=\"URL\",1 is "OK"
+			httpURLERROR=0;
+			httpURL=1;
+     990:	91 e0       	ldi	r25, 0x01	; 1
+     992:	03 c0       	rjmp	.+6      	; 0x99a <__stack+0x13b>
+			for (colon_location=0; ATresponse[colon_location]!=':'; colon_location++) { httpURLrespnse[colon_location]=ATresponse[colon_location];}; // locate the colon ':' in the ATresponse
+			if (strncmp((const char *)httpURLrespnse, (const char *)"+CME ERROR", colon_location)==0)
+			{
+				// If error is related to ME functionality, the response is as: +CME ERROR: <err>
+				httpURLERROR=1;
+				httpURL=0;
+     994:	90 e0       	ldi	r25, 0x00	; 0
+     996:	01 c0       	rjmp	.+2      	; 0x99a <__stack+0x13b>
+     998:	90 e0       	ldi	r25, 0x00	; 0
+			};
+		};
+		
+	} while ((httpURL==0) && (httpURLERROR==0));
+	
+	if (HTTPserver_TEST && httpINIT && httpCID && httpURL){ return (1);}
+     99a:	aa 20       	and	r10, r10
+     99c:	39 f0       	breq	.+14     	; 0x9ac <__stack+0x14d>
+     99e:	99 20       	and	r9, r9
+     9a0:	39 f0       	breq	.+14     	; 0x9b0 <__stack+0x151>
+     9a2:	81 e0       	ldi	r24, 0x01	; 1
+     9a4:	91 11       	cpse	r25, r1
+     9a6:	05 c0       	rjmp	.+10     	; 0x9b2 <__stack+0x153>
+     9a8:	80 e0       	ldi	r24, 0x00	; 0
+     9aa:	03 c0       	rjmp	.+6      	; 0x9b2 <__stack+0x153>
+	else { return (0);};
+     9ac:	80 e0       	ldi	r24, 0x00	; 0
+     9ae:	01 c0       	rjmp	.+2      	; 0x9b2 <__stack+0x153>
+     9b0:	80 e0       	ldi	r24, 0x00	; 0
+	
+	
+}// END OF Download data from HTTP server i.e. HTTPGETmethod(void) function
+     9b2:	a4 96       	adiw	r28, 0x24	; 36
+     9b4:	0f b6       	in	r0, 0x3f	; 63
+     9b6:	f8 94       	cli
+     9b8:	de bf       	out	0x3e, r29	; 62
+     9ba:	0f be       	out	0x3f, r0	; 63
+     9bc:	cd bf       	out	0x3d, r28	; 61
+     9be:	df 91       	pop	r29
+     9c0:	cf 91       	pop	r28
+     9c2:	1f 91       	pop	r17
+     9c4:	0f 91       	pop	r16
+     9c6:	ff 90       	pop	r15
+     9c8:	ef 90       	pop	r14
+     9ca:	df 90       	pop	r13
+     9cc:	cf 90       	pop	r12
+     9ce:	bf 90       	pop	r11
+     9d0:	af 90       	pop	r10
+     9d2:	9f 90       	pop	r9
+     9d4:	8f 90       	pop	r8
+     9d6:	08 95       	ret
+
+000009d8 <GSMLocationTime>:
+Expect Result :	+CIPGSMLOC:	0,121.354848,31.221402,2011/01/26,02:41:06
+				OK 
+
+***************************************************************************************************/
+uint8_t GSMLocationTime(void)
+{
+     9d8:	6f 92       	push	r6
+     9da:	7f 92       	push	r7
+     9dc:	8f 92       	push	r8
+     9de:	9f 92       	push	r9
+     9e0:	af 92       	push	r10
+     9e2:	bf 92       	push	r11
+     9e4:	cf 92       	push	r12
+     9e6:	df 92       	push	r13
+     9e8:	ef 92       	push	r14
+     9ea:	ff 92       	push	r15
+     9ec:	0f 93       	push	r16
+     9ee:	1f 93       	push	r17
+     9f0:	cf 93       	push	r28
+     9f2:	df 93       	push	r29
+     9f4:	cd b7       	in	r28, 0x3d	; 61
+     9f6:	de b7       	in	r29, 0x3e	; 62
+     9f8:	63 97       	sbiw	r28, 0x13	; 19
+     9fa:	0f b6       	in	r0, 0x3f	; 63
+     9fc:	f8 94       	cli
+     9fe:	de bf       	out	0x3e, r29	; 62
+     a00:	0f be       	out	0x3f, r0	; 63
+     a02:	cd bf       	out	0x3d, r28	; 61
+	char LOCresponse[12]="123456789012", locationcode[7]="1234567";
+     a04:	8c e0       	ldi	r24, 0x0C	; 12
+     a06:	e0 ee       	ldi	r30, 0xE0	; 224
+     a08:	f0 e0       	ldi	r31, 0x00	; 0
+     a0a:	de 01       	movw	r26, r28
+     a0c:	11 96       	adiw	r26, 0x01	; 1
+     a0e:	01 90       	ld	r0, Z+
+     a10:	0d 92       	st	X+, r0
+     a12:	8a 95       	dec	r24
+     a14:	e1 f7       	brne	.-8      	; 0xa0e <GSMLocationTime+0x36>
+     a16:	87 e0       	ldi	r24, 0x07	; 7
+     a18:	ed ee       	ldi	r30, 0xED	; 237
+     a1a:	f0 e0       	ldi	r31, 0x00	; 0
+     a1c:	de 01       	movw	r26, r28
+     a1e:	1d 96       	adiw	r26, 0x0d	; 13
+     a20:	01 90       	ld	r0, Z+
+     a22:	0d 92       	st	X+, r0
+     a24:	8a 95       	dec	r24
+     a26:	e1 f7       	brne	.-8      	; 0xa20 <GSMLocationTime+0x48>
+	{
+		UART_TxStringfromPROGMEM(GSMLOC);	// AT+CIPGSMLOC=1,1 GSM Location and Time
+		ATresponse_length = UART_RxString(ATresponse);	// Receive the response of SIM800L in "ATresponse" and its length "ATresponse_length"
+		
+		// Obtain the response if it is +CIPGSMLOC or +CME ERROR
+		for (colon_location=0; ATresponse[colon_location] !=':'; colon_location++) { LOCresponse[colon_location]=ATresponse[colon_location];};
+     a28:	81 2c       	mov	r8, r1
+     a2a:	91 2c       	mov	r9, r1
+     a2c:	a1 2c       	mov	r10, r1
+     a2e:	8e 01       	movw	r16, r28
+     a30:	0f 5f       	subi	r16, 0xFF	; 255
+     a32:	1f 4f       	sbci	r17, 0xFF	; 255
+     a34:	c0 2e       	mov	r12, r16
+     a36:	d1 2e       	mov	r13, r17
+		LCD_Clear();
+		LCD_String("LOC:");
+		LCD_String(LOCresponse);
+		LCD_Command(0xC0);
+		LCD_String("colon:");
+		LCD_Char((colon_location/10)+48);
+     a38:	0f 2e       	mov	r0, r31
+     a3a:	fd ec       	ldi	r31, 0xCD	; 205
+     a3c:	bf 2e       	mov	r11, r31
+     a3e:	f0 2d       	mov	r31, r0
+	comma_location=0;
+	LOCATIONcode=0;
+	
+	do
+	{
+		UART_TxStringfromPROGMEM(GSMLOC);	// AT+CIPGSMLOC=1,1 GSM Location and Time
+     a40:	84 e5       	ldi	r24, 0x54	; 84
+     a42:	90 e0       	ldi	r25, 0x00	; 0
+     a44:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+		ATresponse_length = UART_RxString(ATresponse);	// Receive the response of SIM800L in "ATresponse" and its length "ATresponse_length"
+     a48:	80 e9       	ldi	r24, 0x90	; 144
+     a4a:	90 e0       	ldi	r25, 0x00	; 0
+     a4c:	0e 94 b5 01 	call	0x36a	; 0x36a <UART_RxString>
+     a50:	80 93 7c 03 	sts	0x037C, r24
+		
+		// Obtain the response if it is +CIPGSMLOC or +CME ERROR
+		for (colon_location=0; ATresponse[colon_location] !=':'; colon_location++) { LOCresponse[colon_location]=ATresponse[colon_location];};
+     a54:	80 91 90 00 	lds	r24, 0x0090
+     a58:	8a 33       	cpi	r24, 0x3A	; 58
+     a5a:	a9 f0       	breq	.+42     	; 0xa86 <GSMLocationTime+0xae>
+     a5c:	28 2d       	mov	r18, r8
+     a5e:	39 2d       	mov	r19, r9
+     a60:	7a 2c       	mov	r7, r10
+     a62:	f9 01       	movw	r30, r18
+     a64:	e0 57       	subi	r30, 0x70	; 112
+     a66:	ff 4f       	sbci	r31, 0xFF	; 255
+     a68:	80 81       	ld	r24, Z
+     a6a:	f8 01       	movw	r30, r16
+     a6c:	e2 0f       	add	r30, r18
+     a6e:	f3 1f       	adc	r31, r19
+     a70:	80 83       	st	Z, r24
+     a72:	73 94       	inc	r7
+     a74:	27 2d       	mov	r18, r7
+     a76:	30 e0       	ldi	r19, 0x00	; 0
+     a78:	f9 01       	movw	r30, r18
+     a7a:	e0 57       	subi	r30, 0x70	; 112
+     a7c:	ff 4f       	sbci	r31, 0xFF	; 255
+     a7e:	80 81       	ld	r24, Z
+     a80:	8a 33       	cpi	r24, 0x3A	; 58
+     a82:	79 f7       	brne	.-34     	; 0xa62 <GSMLocationTime+0x8a>
+     a84:	03 c0       	rjmp	.+6      	; 0xa8c <GSMLocationTime+0xb4>
+     a86:	28 2d       	mov	r18, r8
+     a88:	39 2d       	mov	r19, r9
+     a8a:	7a 2c       	mov	r7, r10
+		LOCresponse[colon_location]='\0';// terminate the LOCresponse with NULL character='\0'
+     a8c:	f8 01       	movw	r30, r16
+     a8e:	e2 0f       	add	r30, r18
+     a90:	f3 1f       	adc	r31, r19
+     a92:	10 82       	st	Z, r1
+		
+		LCD_Clear();
+     a94:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("LOC:");
+     a98:	82 e1       	ldi	r24, 0x12	; 18
+     a9a:	91 e0       	ldi	r25, 0x01	; 1
+     a9c:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_String(LOCresponse);
+     aa0:	8c 2d       	mov	r24, r12
+     aa2:	9d 2d       	mov	r25, r13
+     aa4:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     aa8:	80 ec       	ldi	r24, 0xC0	; 192
+     aaa:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("colon:");
+     aae:	87 e1       	ldi	r24, 0x17	; 23
+     ab0:	91 e0       	ldi	r25, 0x01	; 1
+     ab2:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Char((colon_location/10)+48);
+     ab6:	7b 9c       	mul	r7, r11
+     ab8:	f1 2c       	mov	r15, r1
+     aba:	11 24       	eor	r1, r1
+     abc:	f6 94       	lsr	r15
+     abe:	f6 94       	lsr	r15
+     ac0:	f6 94       	lsr	r15
+     ac2:	80 e3       	ldi	r24, 0x30	; 48
+     ac4:	8f 0d       	add	r24, r15
+     ac6:	0e 94 40 01 	call	0x280	; 0x280 <LCD_Char>
+		LCD_Char((colon_location%10)+48);
+     aca:	ff 0c       	add	r15, r15
+     acc:	8f 2d       	mov	r24, r15
+     ace:	88 0f       	add	r24, r24
+     ad0:	88 0f       	add	r24, r24
+     ad2:	f8 0e       	add	r15, r24
+     ad4:	87 2d       	mov	r24, r7
+     ad6:	8f 19       	sub	r24, r15
+     ad8:	80 5d       	subi	r24, 0xD0	; 208
+     ada:	0e 94 40 01 	call	0x280	; 0x280 <LCD_Char>
+     ade:	2f e9       	ldi	r18, 0x9F	; 159
+     ae0:	86 e8       	ldi	r24, 0x86	; 134
+     ae2:	91 e0       	ldi	r25, 0x01	; 1
+     ae4:	21 50       	subi	r18, 0x01	; 1
+     ae6:	80 40       	sbci	r24, 0x00	; 0
+     ae8:	90 40       	sbci	r25, 0x00	; 0
+     aea:	e1 f7       	brne	.-8      	; 0xae4 <GSMLocationTime+0x10c>
+     aec:	00 c0       	rjmp	.+0      	; 0xaee <GSMLocationTime+0x116>
+     aee:	00 00       	nop
+		_delay_ms(500);
+		
+		if (strncmp((const char *)LOCresponse, "+CIPGSMLOC", colon_location)==0)
+     af0:	e7 2c       	mov	r14, r7
+     af2:	f1 2c       	mov	r15, r1
+     af4:	a7 01       	movw	r20, r14
+     af6:	6e e1       	ldi	r22, 0x1E	; 30
+     af8:	71 e0       	ldi	r23, 0x01	; 1
+     afa:	8c 2d       	mov	r24, r12
+     afc:	9d 2d       	mov	r25, r13
+     afe:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     b02:	89 2b       	or	r24, r25
+     b04:	09 f0       	breq	.+2      	; 0xb08 <GSMLocationTime+0x130>
+     b06:	f6 c0       	rjmp	.+492    	; 0xcf4 <GSMLocationTime+0x31c>
+		{
+			
+			colon_location=colon_location+2; // increment colon_location by 2 to find the index of the next character
+     b08:	73 94       	inc	r7
+     b0a:	73 94       	inc	r7
+			
+			// copy the locationcode value at the SIM800L response: +CIPGSMLOC:<locationcode>[,<longitude>,<latitude>,<date>,<time>]
+			for (comma_location=0 ; ATresponse[colon_location]!=','; colon_location++ ,comma_location++) {locationcode[comma_location]=ATresponse[colon_location];};
+     b0c:	27 2d       	mov	r18, r7
+     b0e:	30 e0       	ldi	r19, 0x00	; 0
+     b10:	f9 01       	movw	r30, r18
+     b12:	e0 57       	subi	r30, 0x70	; 112
+     b14:	ff 4f       	sbci	r31, 0xFF	; 255
+     b16:	80 81       	ld	r24, Z
+     b18:	8c 32       	cpi	r24, 0x2C	; 44
+     b1a:	b9 f0       	breq	.+46     	; 0xb4a <GSMLocationTime+0x172>
+     b1c:	fa 2c       	mov	r15, r10
+     b1e:	f9 01       	movw	r30, r18
+     b20:	e0 57       	subi	r30, 0x70	; 112
+     b22:	ff 4f       	sbci	r31, 0xFF	; 255
+     b24:	80 81       	ld	r24, Z
+     b26:	ed e0       	ldi	r30, 0x0D	; 13
+     b28:	f0 e0       	ldi	r31, 0x00	; 0
+     b2a:	ec 0f       	add	r30, r28
+     b2c:	fd 1f       	adc	r31, r29
+     b2e:	ef 0d       	add	r30, r15
+     b30:	f1 1d       	adc	r31, r1
+     b32:	80 83       	st	Z, r24
+     b34:	73 94       	inc	r7
+     b36:	f3 94       	inc	r15
+     b38:	27 2d       	mov	r18, r7
+     b3a:	30 e0       	ldi	r19, 0x00	; 0
+     b3c:	f9 01       	movw	r30, r18
+     b3e:	e0 57       	subi	r30, 0x70	; 112
+     b40:	ff 4f       	sbci	r31, 0xFF	; 255
+     b42:	80 81       	ld	r24, Z
+     b44:	8c 32       	cpi	r24, 0x2C	; 44
+     b46:	59 f7       	brne	.-42     	; 0xb1e <GSMLocationTime+0x146>
+     b48:	01 c0       	rjmp	.+2      	; 0xb4c <GSMLocationTime+0x174>
+     b4a:	fa 2c       	mov	r15, r10
+			locationcode[comma_location]='\0';
+     b4c:	ed e0       	ldi	r30, 0x0D	; 13
+     b4e:	f0 e0       	ldi	r31, 0x00	; 0
+     b50:	ec 0f       	add	r30, r28
+     b52:	fd 1f       	adc	r31, r29
+     b54:	ef 0d       	add	r30, r15
+     b56:	f1 1d       	adc	r31, r1
+     b58:	10 82       	st	Z, r1
+			
+			LOCATIONcode=atoi((const char *)locationcode); //atoi function Converts a string to an integer.
+     b5a:	ce 01       	movw	r24, r28
+     b5c:	0d 96       	adiw	r24, 0x0d	; 13
+     b5e:	0e 94 3e 09 	call	0x127c	; 0x127c <atoi>
+     b62:	e8 2e       	mov	r14, r24
+     b64:	68 2e       	mov	r6, r24
+			
+			LCD_Clear();
+     b66:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+			LCD_String("LOCcode:");
+     b6a:	89 e2       	ldi	r24, 0x29	; 41
+     b6c:	91 e0       	ldi	r25, 0x01	; 1
+     b6e:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+			LCD_Char(LOCATIONcode+48);
+     b72:	80 e3       	ldi	r24, 0x30	; 48
+     b74:	8e 0d       	add	r24, r14
+     b76:	0e 94 40 01 	call	0x280	; 0x280 <LCD_Char>
+			LCD_Command(0xC0);
+     b7a:	80 ec       	ldi	r24, 0xC0	; 192
+     b7c:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+			LCD_String("comma:");
+     b80:	82 e3       	ldi	r24, 0x32	; 50
+     b82:	91 e0       	ldi	r25, 0x01	; 1
+     b84:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+			LCD_Char((comma_location/10)+48);
+     b88:	fb 9c       	mul	r15, r11
+     b8a:	e1 2c       	mov	r14, r1
+     b8c:	11 24       	eor	r1, r1
+     b8e:	e6 94       	lsr	r14
+     b90:	e6 94       	lsr	r14
+     b92:	e6 94       	lsr	r14
+     b94:	80 e3       	ldi	r24, 0x30	; 48
+     b96:	8e 0d       	add	r24, r14
+     b98:	0e 94 40 01 	call	0x280	; 0x280 <LCD_Char>
+			LCD_Char((comma_location%10)+48);
+     b9c:	ee 0c       	add	r14, r14
+     b9e:	8e 2d       	mov	r24, r14
+     ba0:	88 0f       	add	r24, r24
+     ba2:	88 0f       	add	r24, r24
+     ba4:	e8 0e       	add	r14, r24
+     ba6:	8f 2d       	mov	r24, r15
+     ba8:	8e 19       	sub	r24, r14
+     baa:	80 5d       	subi	r24, 0xD0	; 208
+     bac:	0e 94 40 01 	call	0x280	; 0x280 <LCD_Char>
+     bb0:	2f e9       	ldi	r18, 0x9F	; 159
+     bb2:	86 e8       	ldi	r24, 0x86	; 134
+     bb4:	91 e0       	ldi	r25, 0x01	; 1
+     bb6:	21 50       	subi	r18, 0x01	; 1
+     bb8:	80 40       	sbci	r24, 0x00	; 0
+     bba:	90 40       	sbci	r25, 0x00	; 0
+     bbc:	e1 f7       	brne	.-8      	; 0xbb6 <GSMLocationTime+0x1de>
+     bbe:	00 c0       	rjmp	.+0      	; 0xbc0 <GSMLocationTime+0x1e8>
+     bc0:	00 00       	nop
+			_delay_ms(500);
+			
+			if (LOCATIONcode==0)
+     bc2:	61 10       	cpse	r6, r1
+     bc4:	3d cf       	rjmp	.-390    	; 0xa40 <GSMLocationTime+0x68>
+				//};
+				//GSMLOCATIONTIME[i]='\0'; // Terminate the GSMLOCATIONTIME array with NULL='\0' character
+				//
+				//------------------------------------- READ LONGITUDE VALUE ------------------------------------------
+				
+				comma_location++; // increment colon_location  to find the index of the next character of FIRST COMMA','
+     bc6:	73 94       	inc	r7
+				// copy the rssi value at the SIM800L response: +CSQ: <rssi>,<ber>  to rssi matrix
+				for (longitude_length=0 ; ATresponse[comma_location]!=','; comma_location++ ,longitude_length++) {longitude[longitude_length]=ATresponse[comma_location];};
+     bc8:	10 92 67 03 	sts	0x0367, r1
+     bcc:	87 2d       	mov	r24, r7
+     bce:	90 e0       	ldi	r25, 0x00	; 0
+     bd0:	fc 01       	movw	r30, r24
+     bd2:	e0 57       	subi	r30, 0x70	; 112
+     bd4:	ff 4f       	sbci	r31, 0xFF	; 255
+     bd6:	20 81       	ld	r18, Z
+     bd8:	2c 32       	cpi	r18, 0x2C	; 44
+     bda:	b1 f0       	breq	.+44     	; 0xc08 <GSMLocationTime+0x230>
+     bdc:	20 e0       	ldi	r18, 0x00	; 0
+     bde:	fc 01       	movw	r30, r24
+     be0:	e0 57       	subi	r30, 0x70	; 112
+     be2:	ff 4f       	sbci	r31, 0xFF	; 255
+     be4:	80 81       	ld	r24, Z
+     be6:	e2 2f       	mov	r30, r18
+     be8:	f0 e0       	ldi	r31, 0x00	; 0
+     bea:	ec 57       	subi	r30, 0x7C	; 124
+     bec:	ff 4f       	sbci	r31, 0xFF	; 255
+     bee:	80 83       	st	Z, r24
+     bf0:	73 94       	inc	r7
+     bf2:	2f 5f       	subi	r18, 0xFF	; 255
+     bf4:	87 2d       	mov	r24, r7
+     bf6:	90 e0       	ldi	r25, 0x00	; 0
+     bf8:	fc 01       	movw	r30, r24
+     bfa:	e0 57       	subi	r30, 0x70	; 112
+     bfc:	ff 4f       	sbci	r31, 0xFF	; 255
+     bfe:	30 81       	ld	r19, Z
+     c00:	3c 32       	cpi	r19, 0x2C	; 44
+     c02:	69 f7       	brne	.-38     	; 0xbde <GSMLocationTime+0x206>
+     c04:	20 93 67 03 	sts	0x0367, r18
+				longitude[longitude_length]='\0'; // Terminate the longitude array with NULL='\0' character
+     c08:	e0 91 67 03 	lds	r30, 0x0367
+     c0c:	f0 e0       	ldi	r31, 0x00	; 0
+     c0e:	ec 57       	subi	r30, 0x7C	; 124
+     c10:	ff 4f       	sbci	r31, 0xFF	; 255
+     c12:	10 82       	st	Z, r1
+				//LCD_Char((longitude_length%10)+48);
+				//_delay_ms(500);
+				
+				//------------------------------------- READ LATITUDE VALUE ---------------------------------------------
+				
+				comma_location++; // increment colon_location  to find the index of the next character of SECOND COMMA','
+     c14:	73 94       	inc	r7
+				// copy the rssi value at the SIM800L response: +CSQ: <rssi>,<ber>  to rssi matrix
+				for (latitude_length=0 ; ATresponse[comma_location]!=','; comma_location++ ,latitude_length++) { latitude[latitude_length]=ATresponse[comma_location];};
+     c16:	10 92 66 03 	sts	0x0366, r1
+     c1a:	87 2d       	mov	r24, r7
+     c1c:	90 e0       	ldi	r25, 0x00	; 0
+     c1e:	fc 01       	movw	r30, r24
+     c20:	e0 57       	subi	r30, 0x70	; 112
+     c22:	ff 4f       	sbci	r31, 0xFF	; 255
+     c24:	20 81       	ld	r18, Z
+     c26:	2c 32       	cpi	r18, 0x2C	; 44
+     c28:	b1 f0       	breq	.+44     	; 0xc56 <GSMLocationTime+0x27e>
+     c2a:	20 e0       	ldi	r18, 0x00	; 0
+     c2c:	fc 01       	movw	r30, r24
+     c2e:	e0 57       	subi	r30, 0x70	; 112
+     c30:	ff 4f       	sbci	r31, 0xFF	; 255
+     c32:	80 81       	ld	r24, Z
+     c34:	e2 2f       	mov	r30, r18
+     c36:	f0 e0       	ldi	r31, 0x00	; 0
+     c38:	e8 58       	subi	r30, 0x88	; 136
+     c3a:	ff 4f       	sbci	r31, 0xFF	; 255
+     c3c:	80 83       	st	Z, r24
+     c3e:	73 94       	inc	r7
+     c40:	2f 5f       	subi	r18, 0xFF	; 255
+     c42:	87 2d       	mov	r24, r7
+     c44:	90 e0       	ldi	r25, 0x00	; 0
+     c46:	fc 01       	movw	r30, r24
+     c48:	e0 57       	subi	r30, 0x70	; 112
+     c4a:	ff 4f       	sbci	r31, 0xFF	; 255
+     c4c:	30 81       	ld	r19, Z
+     c4e:	3c 32       	cpi	r19, 0x2C	; 44
+     c50:	69 f7       	brne	.-38     	; 0xc2c <GSMLocationTime+0x254>
+     c52:	20 93 66 03 	sts	0x0366, r18
+				latitude[latitude_length]='\0'; // Terminate the latitude array with NULL='\0' character
+     c56:	e0 91 66 03 	lds	r30, 0x0366
+     c5a:	f0 e0       	ldi	r31, 0x00	; 0
+     c5c:	e8 58       	subi	r30, 0x88	; 136
+     c5e:	ff 4f       	sbci	r31, 0xFF	; 255
+     c60:	10 82       	st	Z, r1
+				//LCD_Char((latitude_length%10)+48);
+				//_delay_ms(500);
+				
+				//------------------------------------- READ DATE VALUE ---------------------------------------------
+				
+				comma_location++; // increment colon_location  to find the index of the next character of THIRD COMMA','
+     c62:	73 94       	inc	r7
+				
+				// copy the rssi value at the SIM800L response: +CSQ: <rssi>,<ber>  to rssi matrix
+				for (date_length=0 ; ATresponse[comma_location]!=','; comma_location++ ,date_length++) {date[date_length]=ATresponse[comma_location];};
+     c64:	10 92 65 03 	sts	0x0365, r1
+     c68:	87 2d       	mov	r24, r7
+     c6a:	90 e0       	ldi	r25, 0x00	; 0
+     c6c:	fc 01       	movw	r30, r24
+     c6e:	e0 57       	subi	r30, 0x70	; 112
+     c70:	ff 4f       	sbci	r31, 0xFF	; 255
+     c72:	20 81       	ld	r18, Z
+     c74:	2c 32       	cpi	r18, 0x2C	; 44
+     c76:	b1 f0       	breq	.+44     	; 0xca4 <GSMLocationTime+0x2cc>
+     c78:	20 e0       	ldi	r18, 0x00	; 0
+     c7a:	fc 01       	movw	r30, r24
+     c7c:	e0 57       	subi	r30, 0x70	; 112
+     c7e:	ff 4f       	sbci	r31, 0xFF	; 255
+     c80:	80 81       	ld	r24, Z
+     c82:	e2 2f       	mov	r30, r18
+     c84:	f0 e0       	ldi	r31, 0x00	; 0
+     c86:	e4 59       	subi	r30, 0x94	; 148
+     c88:	ff 4f       	sbci	r31, 0xFF	; 255
+     c8a:	80 83       	st	Z, r24
+     c8c:	73 94       	inc	r7
+     c8e:	2f 5f       	subi	r18, 0xFF	; 255
+     c90:	87 2d       	mov	r24, r7
+     c92:	90 e0       	ldi	r25, 0x00	; 0
+     c94:	fc 01       	movw	r30, r24
+     c96:	e0 57       	subi	r30, 0x70	; 112
+     c98:	ff 4f       	sbci	r31, 0xFF	; 255
+     c9a:	30 81       	ld	r19, Z
+     c9c:	3c 32       	cpi	r19, 0x2C	; 44
+     c9e:	69 f7       	brne	.-38     	; 0xc7a <GSMLocationTime+0x2a2>
+     ca0:	20 93 65 03 	sts	0x0365, r18
+				date[date_length]='\0'; // Terminate the date array with NULL='\0' character
+     ca4:	e0 91 65 03 	lds	r30, 0x0365
+     ca8:	f0 e0       	ldi	r31, 0x00	; 0
+     caa:	e4 59       	subi	r30, 0x94	; 148
+     cac:	ff 4f       	sbci	r31, 0xFF	; 255
+     cae:	10 82       	st	Z, r1
+				//LCD_Char((date_length%10)+48);
+				//_delay_ms(500);
+				
+				//------------------------------------- READ TIME VALUE ---------------------------------------------
+				
+				comma_location++; // increment colon_location  to find the index of the next character of FORTH COMMA','
+     cb0:	73 94       	inc	r7
+				
+				// copy the rssi value at the SIM800L response: +CSQ: <rssi>,<ber>  to rssi matrix
+				for (time_length=0 ; comma_location<=ATresponse_length; comma_location++ ,time_length++) { time[time_length]=ATresponse[comma_location];};
+     cb2:	10 92 64 03 	sts	0x0364, r1
+     cb6:	80 91 7c 03 	lds	r24, 0x037C
+     cba:	87 15       	cp	r24, r7
+     cbc:	98 f0       	brcs	.+38     	; 0xce4 <GSMLocationTime+0x30c>
+     cbe:	80 e0       	ldi	r24, 0x00	; 0
+     cc0:	e7 2d       	mov	r30, r7
+     cc2:	f0 e0       	ldi	r31, 0x00	; 0
+     cc4:	e0 57       	subi	r30, 0x70	; 112
+     cc6:	ff 4f       	sbci	r31, 0xFF	; 255
+     cc8:	90 81       	ld	r25, Z
+     cca:	e8 2f       	mov	r30, r24
+     ccc:	f0 e0       	ldi	r31, 0x00	; 0
+     cce:	e0 5a       	subi	r30, 0xA0	; 160
+     cd0:	ff 4f       	sbci	r31, 0xFF	; 255
+     cd2:	90 83       	st	Z, r25
+     cd4:	73 94       	inc	r7
+     cd6:	8f 5f       	subi	r24, 0xFF	; 255
+     cd8:	90 91 7c 03 	lds	r25, 0x037C
+     cdc:	97 15       	cp	r25, r7
+     cde:	80 f7       	brcc	.-32     	; 0xcc0 <GSMLocationTime+0x2e8>
+     ce0:	80 93 64 03 	sts	0x0364, r24
+				time[time_length]='\0'; // Terminate the time array with NULL='\0' character
+     ce4:	e0 91 64 03 	lds	r30, 0x0364
+     ce8:	f0 e0       	ldi	r31, 0x00	; 0
+     cea:	e0 5a       	subi	r30, 0xA0	; 160
+     cec:	ff 4f       	sbci	r31, 0xFF	; 255
+     cee:	10 82       	st	Z, r1
+			LCD_Char((comma_location%10)+48);
+			_delay_ms(500);
+			
+			if (LOCATIONcode==0)
+			{
+				LOCCODE=1;
+     cf0:	81 e0       	ldi	r24, 0x01	; 1
+     cf2:	0b c0       	rjmp	.+22     	; 0xd0a <GSMLocationTime+0x332>
+				//LCD_Char(LOCERROR+48);
+				//_delay_ms(500);
+				
+			}// END of if-else (LOCATIONcode==0)
+		}
+		else if (strncmp((const char *)LOCresponse, "+CME ERROR", colon_location)==0)
+     cf4:	a7 01       	movw	r20, r14
+     cf6:	60 e0       	ldi	r22, 0x00	; 0
+     cf8:	71 e0       	ldi	r23, 0x01	; 1
+     cfa:	8c 2d       	mov	r24, r12
+     cfc:	9d 2d       	mov	r25, r13
+     cfe:	0e 94 65 09 	call	0x12ca	; 0x12ca <strncmp>
+     d02:	89 2b       	or	r24, r25
+     d04:	09 f0       	breq	.+2      	; 0xd08 <GSMLocationTime+0x330>
+     d06:	9c ce       	rjmp	.-712    	; 0xa40 <GSMLocationTime+0x68>
+		{
+			//If error is related to ME functionality: the response is as:	+CME ERROR:<err>
+			LOCCODE=0;
+     d08:	80 e0       	ldi	r24, 0x00	; 0
+	} while ((LOCCODE==0) && (LOCERROR==0));
+	
+
+	return(LOCCODE);
+	
+}//END OF uint8_t GSMLOCATIONTIME(void) Function
+     d0a:	63 96       	adiw	r28, 0x13	; 19
+     d0c:	0f b6       	in	r0, 0x3f	; 63
+     d0e:	f8 94       	cli
+     d10:	de bf       	out	0x3e, r29	; 62
+     d12:	0f be       	out	0x3f, r0	; 63
+     d14:	cd bf       	out	0x3d, r28	; 61
+     d16:	df 91       	pop	r29
+     d18:	cf 91       	pop	r28
+     d1a:	1f 91       	pop	r17
+     d1c:	0f 91       	pop	r16
+     d1e:	ff 90       	pop	r15
+     d20:	ef 90       	pop	r14
+     d22:	df 90       	pop	r13
+     d24:	cf 90       	pop	r12
+     d26:	bf 90       	pop	r11
+     d28:	af 90       	pop	r10
+     d2a:	9f 90       	pop	r9
+     d2c:	8f 90       	pop	r8
+     d2e:	7f 90       	pop	r7
+     d30:	6f 90       	pop	r6
+     d32:	08 95       	ret
+
+00000d34 <ExINTERRUPT_Init>:
+
+void ExINTERRUPT_Init()
+{
+	// Set PORTD2/INT0 pin for input (this clears bit DDD2 in the DDR)
+	// to check SIM800L RI/RING pin status where its standby status is HIGH:  ---Hi---|__Low__|---Hi---
+	DDRD  &=~(1 << PD2);				// Activate interrupt pin INT0
+     d34:	8a 98       	cbi	0x11, 2	; 17
+	PORTD |=(1 << PD2);					// Pull-up resistor activated
+     d36:	92 9a       	sbi	0x12, 2	; 18
+	MCUCR  =(1 << ISC01)|(0 << ISC00);	// The falling edge of INT0 generates an interrupt request.
+     d38:	82 e0       	ldi	r24, 0x02	; 2
+     d3a:	85 bf       	out	0x35, r24	; 53
+	GICR  |=(1 << INT0);				// Start receiving interrupt signal via INT0 at PORTD2 is activated
+     d3c:	8b b7       	in	r24, 0x3b	; 59
+     d3e:	80 64       	ori	r24, 0x40	; 64
+     d40:	8b bf       	out	0x3b, r24	; 59
+	sei();								// Activate General External Interrupt
+     d42:	78 94       	sei
+     d44:	08 95       	ret
+
+00000d46 <main>:
+	char DATE[20]=", Date:";
+	char TIME[20]=", Time:";
+	
+	//--------------------------- INITIALIZATIONS --------------------------------------------------------------------
+	
+	ExINTERRUPT_Init();		// Interrupt initialization function
+     d46:	0e 94 9a 06 	call	0xd34	; 0xd34 <ExINTERRUPT_Init>
+	LCD_Init();				// LCD initialization function
+     d4a:	0e 94 1b 01 	call	0x236	; 0x236 <LCD_Init>
+	UART_Init(BAUDRATE);	// UART initialization function with baud rate
+     d4e:	60 e6       	ldi	r22, 0x60	; 96
+     d50:	79 e0       	ldi	r23, 0x09	; 9
+     d52:	80 e0       	ldi	r24, 0x00	; 0
+     d54:	90 e0       	ldi	r25, 0x00	; 0
+     d56:	0e 94 7d 01 	call	0x2fa	; 0x2fa <UART_Init>
+     d5a:	2f e9       	ldi	r18, 0x9F	; 159
+     d5c:	86 e8       	ldi	r24, 0x86	; 134
+     d5e:	91 e0       	ldi	r25, 0x01	; 1
+     d60:	21 50       	subi	r18, 0x01	; 1
+     d62:	80 40       	sbci	r24, 0x00	; 0
+     d64:	90 40       	sbci	r25, 0x00	; 0
+     d66:	e1 f7       	brne	.-8      	; 0xd60 <main+0x1a>
+     d68:	00 c0       	rjmp	.+0      	; 0xd6a <main+0x24>
+     d6a:	00 00       	nop
+	1. Check AT command.
+	2. Set baud rate.
+	3. Save the configuration.
+	4. Turn off the Echo.
+	-------------------------------------------------------------------------------------------------------------------------------------*/
+	LCD_Clear();
+     d6c:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("GSM MODEM SIM800");
+     d70:	83 e5       	ldi	r24, 0x53	; 83
+     d72:	91 e0       	ldi	r25, 0x01	; 1
+     d74:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+     d78:	80 ec       	ldi	r24, 0xC0	; 192
+     d7a:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Initialization..");
+     d7e:	84 e6       	ldi	r24, 0x64	; 100
+     d80:	91 e0       	ldi	r25, 0x01	; 1
+     d82:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     d86:	8f e4       	ldi	r24, 0x4F	; 79
+     d88:	93 ec       	ldi	r25, 0xC3	; 195
+     d8a:	01 97       	sbiw	r24, 0x01	; 1
+     d8c:	f1 f7       	brne	.-4      	; 0xd8a <main+0x44>
+     d8e:	00 c0       	rjmp	.+0      	; 0xd90 <main+0x4a>
+     d90:	00 00       	nop
+	_delay_ms(200);
+	
+	if (CheckAT()>0)
+     d92:	0e 94 f0 01 	call	0x3e0	; 0x3e0 <CheckAT>
+     d96:	88 23       	and	r24, r24
+     d98:	b9 f0       	breq	.+46     	; 0xdc8 <main+0x82>
+	{
+		LCD_Clear();
+     d9a:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("GSM MODEM INIT..");
+     d9e:	85 e7       	ldi	r24, 0x75	; 117
+     da0:	91 e0       	ldi	r25, 0x01	; 1
+     da2:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     da6:	80 ec       	ldi	r24, 0xC0	; 192
+     da8:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("Successful...!!!");
+     dac:	86 e8       	ldi	r24, 0x86	; 134
+     dae:	91 e0       	ldi	r25, 0x01	; 1
+     db0:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     db4:	9f e7       	ldi	r25, 0x7F	; 127
+     db6:	29 ea       	ldi	r18, 0xA9	; 169
+     db8:	83 e0       	ldi	r24, 0x03	; 3
+     dba:	91 50       	subi	r25, 0x01	; 1
+     dbc:	20 40       	sbci	r18, 0x00	; 0
+     dbe:	80 40       	sbci	r24, 0x00	; 0
+     dc0:	e1 f7       	brne	.-8      	; 0xdba <main+0x74>
+     dc2:	00 c0       	rjmp	.+0      	; 0xdc4 <main+0x7e>
+     dc4:	00 00       	nop
+     dc6:	42 c0       	rjmp	.+132    	; 0xe4c <main+0x106>
+		_delay_ms(1200);
+	}
+	else
+	{
+		LCD_Clear();
+     dc8:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("RESPONSE ERROR!!");
+     dcc:	87 e9       	ldi	r24, 0x97	; 151
+     dce:	91 e0       	ldi	r25, 0x01	; 1
+     dd0:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     dd4:	80 ec       	ldi	r24, 0xC0	; 192
+     dd6:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("Check Procedure!");
+     dda:	88 ea       	ldi	r24, 0xA8	; 168
+     ddc:	91 e0       	ldi	r25, 0x01	; 1
+     dde:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     de2:	9f eb       	ldi	r25, 0xBF	; 191
+     de4:	26 eb       	ldi	r18, 0xB6	; 182
+     de6:	86 e0       	ldi	r24, 0x06	; 6
+     de8:	91 50       	subi	r25, 0x01	; 1
+     dea:	20 40       	sbci	r18, 0x00	; 0
+     dec:	80 40       	sbci	r24, 0x00	; 0
+     dee:	e1 f7       	brne	.-8      	; 0xde8 <main+0xa2>
+     df0:	00 c0       	rjmp	.+0      	; 0xdf2 <main+0xac>
+     df2:	00 00       	nop
+		_delay_ms(2200);
+		
+		LCD_Clear();	
+     df4:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("*ERROR HANDLING:");
+     df8:	89 eb       	ldi	r24, 0xB9	; 185
+     dfa:	91 e0       	ldi	r25, 0x01	; 1
+     dfc:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     e00:	80 ec       	ldi	r24, 0xC0	; 192
+     e02:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("1-TURN-OF POWER!");
+     e06:	8a ec       	ldi	r24, 0xCA	; 202
+     e08:	91 e0       	ldi	r25, 0x01	; 1
+     e0a:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     e0e:	9f eb       	ldi	r25, 0xBF	; 191
+     e10:	26 eb       	ldi	r18, 0xB6	; 182
+     e12:	86 e0       	ldi	r24, 0x06	; 6
+     e14:	91 50       	subi	r25, 0x01	; 1
+     e16:	20 40       	sbci	r18, 0x00	; 0
+     e18:	80 40       	sbci	r24, 0x00	; 0
+     e1a:	e1 f7       	brne	.-8      	; 0xe14 <main+0xce>
+     e1c:	00 c0       	rjmp	.+0      	; 0xe1e <main+0xd8>
+     e1e:	00 00       	nop
+		_delay_ms(2200);
+		
+		LCD_Clear();
+     e20:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("*ERROR HANDLING:");
+     e24:	89 eb       	ldi	r24, 0xB9	; 185
+     e26:	91 e0       	ldi	r25, 0x01	; 1
+     e28:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     e2c:	80 ec       	ldi	r24, 0xC0	; 192
+     e2e:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("2-RESTART GSM !!");
+     e32:	8b ed       	ldi	r24, 0xDB	; 219
+     e34:	91 e0       	ldi	r25, 0x01	; 1
+     e36:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     e3a:	9f eb       	ldi	r25, 0xBF	; 191
+     e3c:	26 eb       	ldi	r18, 0xB6	; 182
+     e3e:	86 e0       	ldi	r24, 0x06	; 6
+     e40:	91 50       	subi	r25, 0x01	; 1
+     e42:	20 40       	sbci	r18, 0x00	; 0
+     e44:	80 40       	sbci	r24, 0x00	; 0
+     e46:	e1 f7       	brne	.-8      	; 0xe40 <main+0xfa>
+     e48:	00 c0       	rjmp	.+0      	; 0xe4a <main+0x104>
+     e4a:	00 00       	nop
+		_delay_ms(2200);
+	};
+	
+	//---------------------------------------Checking the SIM card status  -------------------------------------------------
+	
+	LCD_Clear();
+     e4c:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("SIM CARD STATUS:");
+     e50:	8c ee       	ldi	r24, 0xEC	; 236
+     e52:	91 e0       	ldi	r25, 0x01	; 1
+     e54:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+     e58:	80 ec       	ldi	r24, 0xC0	; 192
+     e5a:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Checking........");
+     e5e:	8d ef       	ldi	r24, 0xFD	; 253
+     e60:	91 e0       	ldi	r25, 0x01	; 1
+     e62:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     e66:	8f e4       	ldi	r24, 0x4F	; 79
+     e68:	93 ec       	ldi	r25, 0xC3	; 195
+     e6a:	01 97       	sbiw	r24, 0x01	; 1
+     e6c:	f1 f7       	brne	.-4      	; 0xe6a <main+0x124>
+     e6e:	00 c0       	rjmp	.+0      	; 0xe70 <main+0x12a>
+     e70:	00 00       	nop
+	_delay_ms(200);
+	
+	if (SIMcardINFO()>0)
+     e72:	0e 94 68 02 	call	0x4d0	; 0x4d0 <SIMcardINFO>
+     e76:	88 23       	and	r24, r24
+     e78:	09 f4       	brne	.+2      	; 0xe7c <main+0x136>
+     e7a:	52 c0       	rjmp	.+164    	; 0xf20 <main+0x1da>
+	{
+		LCD_Clear();
+     e7c:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("SIM CARD STATUS:");
+     e80:	8c ee       	ldi	r24, 0xEC	; 236
+     e82:	91 e0       	ldi	r25, 0x01	; 1
+     e84:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     e88:	80 ec       	ldi	r24, 0xC0	; 192
+     e8a:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("Inserted Safely!");
+     e8e:	8e e0       	ldi	r24, 0x0E	; 14
+     e90:	92 e0       	ldi	r25, 0x02	; 2
+     e92:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     e96:	9f e7       	ldi	r25, 0x7F	; 127
+     e98:	29 ea       	ldi	r18, 0xA9	; 169
+     e9a:	83 e0       	ldi	r24, 0x03	; 3
+     e9c:	91 50       	subi	r25, 0x01	; 1
+     e9e:	20 40       	sbci	r18, 0x00	; 0
+     ea0:	80 40       	sbci	r24, 0x00	; 0
+     ea2:	e1 f7       	brne	.-8      	; 0xe9c <main+0x156>
+     ea4:	00 c0       	rjmp	.+0      	; 0xea6 <main+0x160>
+     ea6:	00 00       	nop
+     ea8:	3f c0       	rjmp	.+126    	; 0xf28 <main+0x1e2>
+	}
+	else
+	{ 
+		while(SIMcardINFO()<=0)
+		{
+		LCD_Clear();
+     eaa:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("*SIM CARD ERROR:");
+     eae:	8f e1       	ldi	r24, 0x1F	; 31
+     eb0:	92 e0       	ldi	r25, 0x02	; 2
+     eb2:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     eb6:	80 ec       	ldi	r24, 0xC0	; 192
+     eb8:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("Check Procedure!");
+     ebc:	88 ea       	ldi	r24, 0xA8	; 168
+     ebe:	91 e0       	ldi	r25, 0x01	; 1
+     ec0:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     ec4:	9f eb       	ldi	r25, 0xBF	; 191
+     ec6:	26 eb       	ldi	r18, 0xB6	; 182
+     ec8:	86 e0       	ldi	r24, 0x06	; 6
+     eca:	91 50       	subi	r25, 0x01	; 1
+     ecc:	20 40       	sbci	r18, 0x00	; 0
+     ece:	80 40       	sbci	r24, 0x00	; 0
+     ed0:	e1 f7       	brne	.-8      	; 0xeca <main+0x184>
+     ed2:	00 c0       	rjmp	.+0      	; 0xed4 <main+0x18e>
+     ed4:	00 00       	nop
+		_delay_ms(2200);
+		LCD_Clear();
+     ed6:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("1-SIM Validity");
+     eda:	80 e3       	ldi	r24, 0x30	; 48
+     edc:	92 e0       	ldi	r25, 0x02	; 2
+     ede:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     ee2:	80 ec       	ldi	r24, 0xC0	; 192
+     ee4:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("2-Re-Insert SIM");
+     ee8:	8f e3       	ldi	r24, 0x3F	; 63
+     eea:	92 e0       	ldi	r25, 0x02	; 2
+     eec:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     ef0:	9f eb       	ldi	r25, 0xBF	; 191
+     ef2:	26 eb       	ldi	r18, 0xB6	; 182
+     ef4:	86 e0       	ldi	r24, 0x06	; 6
+     ef6:	91 50       	subi	r25, 0x01	; 1
+     ef8:	20 40       	sbci	r18, 0x00	; 0
+     efa:	80 40       	sbci	r24, 0x00	; 0
+     efc:	e1 f7       	brne	.-8      	; 0xef6 <main+0x1b0>
+     efe:	00 c0       	rjmp	.+0      	; 0xf00 <main+0x1ba>
+     f00:	00 00       	nop
+		_delay_ms(2200);
+		LCD_Clear();
+     f02:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("3_Restart System");
+     f06:	8f e4       	ldi	r24, 0x4F	; 79
+     f08:	92 e0       	ldi	r25, 0x02	; 2
+     f0a:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     f0e:	9f eb       	ldi	r25, 0xBF	; 191
+     f10:	26 eb       	ldi	r18, 0xB6	; 182
+     f12:	86 e0       	ldi	r24, 0x06	; 6
+     f14:	91 50       	subi	r25, 0x01	; 1
+     f16:	20 40       	sbci	r18, 0x00	; 0
+     f18:	80 40       	sbci	r24, 0x00	; 0
+     f1a:	e1 f7       	brne	.-8      	; 0xf14 <main+0x1ce>
+     f1c:	00 c0       	rjmp	.+0      	; 0xf1e <main+0x1d8>
+     f1e:	00 00       	nop
+		LCD_String("Inserted Safely!");
+		_delay_ms(1200);
+	}
+	else
+	{ 
+		while(SIMcardINFO()<=0)
+     f20:	0e 94 68 02 	call	0x4d0	; 0x4d0 <SIMcardINFO>
+     f24:	88 23       	and	r24, r24
+     f26:	09 f2       	breq	.-126    	; 0xeaa <main+0x164>
+		////UART_TxStringfromPROGMEM(FUNFULL);	
+	//};
+	
+	//-------------------------------- IP Based Application Setting (OPEN GPRS) ------------------------------------------
+	
+	LCD_Clear();
+     f28:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("IP BASED APPS.!!");
+     f2c:	80 e6       	ldi	r24, 0x60	; 96
+     f2e:	92 e0       	ldi	r25, 0x02	; 2
+     f30:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+     f34:	80 ec       	ldi	r24, 0xC0	; 192
+     f36:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("GPRS Setting....");
+     f3a:	81 e7       	ldi	r24, 0x71	; 113
+     f3c:	92 e0       	ldi	r25, 0x02	; 2
+     f3e:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     f42:	9f e9       	ldi	r25, 0x9F	; 159
+     f44:	26 e8       	ldi	r18, 0x86	; 134
+     f46:	81 e0       	ldi	r24, 0x01	; 1
+     f48:	91 50       	subi	r25, 0x01	; 1
+     f4a:	20 40       	sbci	r18, 0x00	; 0
+     f4c:	80 40       	sbci	r24, 0x00	; 0
+     f4e:	e1 f7       	brne	.-8      	; 0xf48 <main+0x202>
+     f50:	00 c0       	rjmp	.+0      	; 0xf52 <main+0x20c>
+     f52:	00 00       	nop
+	_delay_ms(500);
+	
+	if (BEARERconfiguration(1)>0)
+     f54:	81 e0       	ldi	r24, 0x01	; 1
+     f56:	0e 94 a6 02 	call	0x54c	; 0x54c <BEARERconfiguration>
+     f5a:	88 23       	and	r24, r24
+     f5c:	b9 f0       	breq	.+46     	; 0xf8c <main+0x246>
+	{
+		LCD_Clear();
+     f5e:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("OPEN THE GPRS.!!");
+     f62:	82 e8       	ldi	r24, 0x82	; 130
+     f64:	92 e0       	ldi	r25, 0x02	; 2
+     f66:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     f6a:	80 ec       	ldi	r24, 0xC0	; 192
+     f6c:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("Successful...!!!");
+     f70:	86 e8       	ldi	r24, 0x86	; 134
+     f72:	91 e0       	ldi	r25, 0x01	; 1
+     f74:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     f78:	9f e7       	ldi	r25, 0x7F	; 127
+     f7a:	29 ea       	ldi	r18, 0xA9	; 169
+     f7c:	83 e0       	ldi	r24, 0x03	; 3
+     f7e:	91 50       	subi	r25, 0x01	; 1
+     f80:	20 40       	sbci	r18, 0x00	; 0
+     f82:	80 40       	sbci	r24, 0x00	; 0
+     f84:	e1 f7       	brne	.-8      	; 0xf7e <main+0x238>
+     f86:	00 c0       	rjmp	.+0      	; 0xf88 <main+0x242>
+     f88:	00 00       	nop
+     f8a:	2c c0       	rjmp	.+88     	; 0xfe4 <main+0x29e>
+		_delay_ms(1200);
+	}
+	else
+	{
+		LCD_Clear();
+     f8c:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("OPEN GPRS ERROR!");
+     f90:	83 e9       	ldi	r24, 0x93	; 147
+     f92:	92 e0       	ldi	r25, 0x02	; 2
+     f94:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     f98:	80 ec       	ldi	r24, 0xC0	; 192
+     f9a:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("Check Procedure!");
+     f9e:	88 ea       	ldi	r24, 0xA8	; 168
+     fa0:	91 e0       	ldi	r25, 0x01	; 1
+     fa2:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     fa6:	9f e7       	ldi	r25, 0x7F	; 127
+     fa8:	29 ea       	ldi	r18, 0xA9	; 169
+     faa:	83 e0       	ldi	r24, 0x03	; 3
+     fac:	91 50       	subi	r25, 0x01	; 1
+     fae:	20 40       	sbci	r18, 0x00	; 0
+     fb0:	80 40       	sbci	r24, 0x00	; 0
+     fb2:	e1 f7       	brne	.-8      	; 0xfac <main+0x266>
+     fb4:	00 c0       	rjmp	.+0      	; 0xfb6 <main+0x270>
+     fb6:	00 00       	nop
+		_delay_ms(1200);
+		
+		LCD_Clear();
+     fb8:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+		LCD_String("*ERROR HANDLING:");
+     fbc:	89 eb       	ldi	r24, 0xB9	; 185
+     fbe:	91 e0       	ldi	r25, 0x01	; 1
+     fc0:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+		LCD_Command(0xC0);
+     fc4:	80 ec       	ldi	r24, 0xC0	; 192
+     fc6:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+		LCD_String("Use SMS Services");
+     fca:	84 ea       	ldi	r24, 0xA4	; 164
+     fcc:	92 e0       	ldi	r25, 0x02	; 2
+     fce:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+     fd2:	9f eb       	ldi	r25, 0xBF	; 191
+     fd4:	26 eb       	ldi	r18, 0xB6	; 182
+     fd6:	86 e0       	ldi	r24, 0x06	; 6
+     fd8:	91 50       	subi	r25, 0x01	; 1
+     fda:	20 40       	sbci	r18, 0x00	; 0
+     fdc:	80 40       	sbci	r24, 0x00	; 0
+     fde:	e1 f7       	brne	.-8      	; 0xfd8 <main+0x292>
+     fe0:	00 c0       	rjmp	.+0      	; 0xfe2 <main+0x29c>
+     fe2:	00 00       	nop
+		_delay_ms(2200);
+	};
+	//-------------------------------- IP Based Application Setting (CLOSE GPRS) ------------------------------------------
+	
+	if (BEARERconfiguration(0)>0)
+     fe4:	80 e0       	ldi	r24, 0x00	; 0
+     fe6:	0e 94 a6 02 	call	0x54c	; 0x54c <BEARERconfiguration>
+     fea:	88 23       	and	r24, r24
+     fec:	b9 f0       	breq	.+46     	; 0x101c <main+0x2d6>
+	{
+	LCD_Clear();
+     fee:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("CLOSE THE GPRS.!");
+     ff2:	85 eb       	ldi	r24, 0xB5	; 181
+     ff4:	92 e0       	ldi	r25, 0x02	; 2
+     ff6:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+     ffa:	80 ec       	ldi	r24, 0xC0	; 192
+     ffc:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Successful...!!!");
+    1000:	86 e8       	ldi	r24, 0x86	; 134
+    1002:	91 e0       	ldi	r25, 0x01	; 1
+    1004:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    1008:	9f e7       	ldi	r25, 0x7F	; 127
+    100a:	29 ea       	ldi	r18, 0xA9	; 169
+    100c:	83 e0       	ldi	r24, 0x03	; 3
+    100e:	91 50       	subi	r25, 0x01	; 1
+    1010:	20 40       	sbci	r18, 0x00	; 0
+    1012:	80 40       	sbci	r24, 0x00	; 0
+    1014:	e1 f7       	brne	.-8      	; 0x100e <main+0x2c8>
+    1016:	00 c0       	rjmp	.+0      	; 0x1018 <main+0x2d2>
+    1018:	00 00       	nop
+    101a:	2c c0       	rjmp	.+88     	; 0x1074 <main+0x32e>
+	_delay_ms(1200);
+	}
+	else
+	{
+	LCD_Clear();
+    101c:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("CLOSE GPRS ERROR!");
+    1020:	86 ec       	ldi	r24, 0xC6	; 198
+    1022:	92 e0       	ldi	r25, 0x02	; 2
+    1024:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+    1028:	80 ec       	ldi	r24, 0xC0	; 192
+    102a:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Check Procedure!");
+    102e:	88 ea       	ldi	r24, 0xA8	; 168
+    1030:	91 e0       	ldi	r25, 0x01	; 1
+    1032:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    1036:	9f e7       	ldi	r25, 0x7F	; 127
+    1038:	29 ea       	ldi	r18, 0xA9	; 169
+    103a:	83 e0       	ldi	r24, 0x03	; 3
+    103c:	91 50       	subi	r25, 0x01	; 1
+    103e:	20 40       	sbci	r18, 0x00	; 0
+    1040:	80 40       	sbci	r24, 0x00	; 0
+    1042:	e1 f7       	brne	.-8      	; 0x103c <main+0x2f6>
+    1044:	00 c0       	rjmp	.+0      	; 0x1046 <main+0x300>
+    1046:	00 00       	nop
+	_delay_ms(1200);
+	
+	LCD_Clear();
+    1048:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("*ERROR HANDLING:");
+    104c:	89 eb       	ldi	r24, 0xB9	; 185
+    104e:	91 e0       	ldi	r25, 0x01	; 1
+    1050:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+    1054:	80 ec       	ldi	r24, 0xC0	; 192
+    1056:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Use SMS Services");
+    105a:	84 ea       	ldi	r24, 0xA4	; 164
+    105c:	92 e0       	ldi	r25, 0x02	; 2
+    105e:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    1062:	9f eb       	ldi	r25, 0xBF	; 191
+    1064:	26 eb       	ldi	r18, 0xB6	; 182
+    1066:	86 e0       	ldi	r24, 0x06	; 6
+    1068:	91 50       	subi	r25, 0x01	; 1
+    106a:	20 40       	sbci	r18, 0x00	; 0
+    106c:	80 40       	sbci	r24, 0x00	; 0
+    106e:	e1 f7       	brne	.-8      	; 0x1068 <main+0x322>
+    1070:	00 c0       	rjmp	.+0      	; 0x1072 <main+0x32c>
+    1072:	00 00       	nop
+	_delay_ms(2200);
+	};
+	
+	//-------------------------------- SETUP HTTP SERVER ------------------------------------------
+	
+	LCD_Clear();
+    1074:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("SETUP HTTPSERVER");
+    1078:	88 ed       	ldi	r24, 0xD8	; 216
+    107a:	92 e0       	ldi	r25, 0x02	; 2
+    107c:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+    1080:	80 ec       	ldi	r24, 0xC0	; 192
+    1082:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("HTTP Setting....");
+    1086:	89 ee       	ldi	r24, 0xE9	; 233
+    1088:	92 e0       	ldi	r25, 0x02	; 2
+    108a:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    108e:	9f ef       	ldi	r25, 0xFF	; 255
+    1090:	20 e7       	ldi	r18, 0x70	; 112
+    1092:	82 e0       	ldi	r24, 0x02	; 2
+    1094:	91 50       	subi	r25, 0x01	; 1
+    1096:	20 40       	sbci	r18, 0x00	; 0
+    1098:	80 40       	sbci	r24, 0x00	; 0
+    109a:	e1 f7       	brne	.-8      	; 0x1094 <main+0x34e>
+    109c:	00 c0       	rjmp	.+0      	; 0x109e <main+0x358>
+    109e:	00 00       	nop
+	_delay_ms(800);
+	
+	if ( HTTPsetup()>0)
+    10a0:	0e 94 b4 03 	call	0x768	; 0x768 <HTTPsetup>
+    10a4:	88 23       	and	r24, r24
+    10a6:	b9 f0       	breq	.+46     	; 0x10d6 <main+0x390>
+	{
+	LCD_Clear();
+    10a8:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("SETUP HTTPSERVER");
+    10ac:	88 ed       	ldi	r24, 0xD8	; 216
+    10ae:	92 e0       	ldi	r25, 0x02	; 2
+    10b0:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+    10b4:	80 ec       	ldi	r24, 0xC0	; 192
+    10b6:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Successful...!!!");
+    10ba:	86 e8       	ldi	r24, 0x86	; 134
+    10bc:	91 e0       	ldi	r25, 0x01	; 1
+    10be:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    10c2:	9f e7       	ldi	r25, 0x7F	; 127
+    10c4:	29 ea       	ldi	r18, 0xA9	; 169
+    10c6:	83 e0       	ldi	r24, 0x03	; 3
+    10c8:	91 50       	subi	r25, 0x01	; 1
+    10ca:	20 40       	sbci	r18, 0x00	; 0
+    10cc:	80 40       	sbci	r24, 0x00	; 0
+    10ce:	e1 f7       	brne	.-8      	; 0x10c8 <main+0x382>
+    10d0:	00 c0       	rjmp	.+0      	; 0x10d2 <main+0x38c>
+    10d2:	00 00       	nop
+    10d4:	1f c0       	rjmp	.+62     	; 0x1114 <main+0x3ce>
+	_delay_ms(1200);
+	}
+	else
+	{
+	LCD_Clear();
+    10d6:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("HTTPSERVER ERROR");
+    10da:	8a ef       	ldi	r24, 0xFA	; 250
+    10dc:	92 e0       	ldi	r25, 0x02	; 2
+    10de:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+    10e2:	80 ec       	ldi	r24, 0xC0	; 192
+    10e4:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Check Procedure!");
+    10e8:	88 ea       	ldi	r24, 0xA8	; 168
+    10ea:	91 e0       	ldi	r25, 0x01	; 1
+    10ec:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Clear();
+    10f0:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_Command(0xC0);
+    10f4:	80 ec       	ldi	r24, 0xC0	; 192
+    10f6:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("RESET  SYSTEM");
+    10fa:	8b e0       	ldi	r24, 0x0B	; 11
+    10fc:	93 e0       	ldi	r25, 0x03	; 3
+    10fe:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    1102:	9f e7       	ldi	r25, 0x7F	; 127
+    1104:	29 ea       	ldi	r18, 0xA9	; 169
+    1106:	83 e0       	ldi	r24, 0x03	; 3
+    1108:	91 50       	subi	r25, 0x01	; 1
+    110a:	20 40       	sbci	r18, 0x00	; 0
+    110c:	80 40       	sbci	r24, 0x00	; 0
+    110e:	e1 f7       	brne	.-8      	; 0x1108 <main+0x3c2>
+    1110:	00 c0       	rjmp	.+0      	; 0x1112 <main+0x3cc>
+    1112:	00 00       	nop
+	_delay_ms(1200);
+	};
+	
+	//-------------------------------- READ GSM LOCATION (latitude and longitude) AND TIME (date and time) ------------------------------------------
+	
+	LCD_Clear();
+    1114:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("GSM LOC.AND TIME");
+    1118:	89 e1       	ldi	r24, 0x19	; 25
+    111a:	93 e0       	ldi	r25, 0x03	; 3
+    111c:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+    1120:	80 ec       	ldi	r24, 0xC0	; 192
+    1122:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Getting.........");
+    1126:	8a e2       	ldi	r24, 0x2A	; 42
+    1128:	93 e0       	ldi	r25, 0x03	; 3
+    112a:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    112e:	9f e9       	ldi	r25, 0x9F	; 159
+    1130:	26 e8       	ldi	r18, 0x86	; 134
+    1132:	81 e0       	ldi	r24, 0x01	; 1
+    1134:	91 50       	subi	r25, 0x01	; 1
+    1136:	20 40       	sbci	r18, 0x00	; 0
+    1138:	80 40       	sbci	r24, 0x00	; 0
+    113a:	e1 f7       	brne	.-8      	; 0x1134 <main+0x3ee>
+    113c:	00 c0       	rjmp	.+0      	; 0x113e <main+0x3f8>
+    113e:	00 00       	nop
+	_delay_ms(500);
+	
+	if ( GSMLocationTime()>0)
+    1140:	0e 94 ec 04 	call	0x9d8	; 0x9d8 <GSMLocationTime>
+    1144:	88 23       	and	r24, r24
+    1146:	09 f4       	brne	.+2      	; 0x114a <main+0x404>
+    1148:	53 c0       	rjmp	.+166    	; 0x11f0 <main+0x4aa>
+	{
+	LCD_Clear();
+    114a:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("GSM LOC.AND TIME");
+    114e:	89 e1       	ldi	r24, 0x19	; 25
+    1150:	93 e0       	ldi	r25, 0x03	; 3
+    1152:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+    1156:	80 ec       	ldi	r24, 0xC0	; 192
+    1158:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Successful...!!!");
+    115c:	86 e8       	ldi	r24, 0x86	; 134
+    115e:	91 e0       	ldi	r25, 0x01	; 1
+    1160:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    1164:	9f e7       	ldi	r25, 0x7F	; 127
+    1166:	29 ea       	ldi	r18, 0xA9	; 169
+    1168:	83 e0       	ldi	r24, 0x03	; 3
+    116a:	91 50       	subi	r25, 0x01	; 1
+    116c:	20 40       	sbci	r18, 0x00	; 0
+    116e:	80 40       	sbci	r24, 0x00	; 0
+    1170:	e1 f7       	brne	.-8      	; 0x116a <main+0x424>
+    1172:	00 c0       	rjmp	.+0      	; 0x1174 <main+0x42e>
+    1174:	00 00       	nop
+	_delay_ms(1200);
+	
+	LCD_Clear();
+    1176:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("Long:");
+    117a:	8b e3       	ldi	r24, 0x3B	; 59
+    117c:	93 e0       	ldi	r25, 0x03	; 3
+    117e:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_String(longitude);
+    1182:	84 e8       	ldi	r24, 0x84	; 132
+    1184:	90 e0       	ldi	r25, 0x00	; 0
+    1186:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+    118a:	80 ec       	ldi	r24, 0xC0	; 192
+    118c:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Lat:");
+    1190:	81 e4       	ldi	r24, 0x41	; 65
+    1192:	93 e0       	ldi	r25, 0x03	; 3
+    1194:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_String(latitude);
+    1198:	88 e7       	ldi	r24, 0x78	; 120
+    119a:	90 e0       	ldi	r25, 0x00	; 0
+    119c:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    11a0:	9f e7       	ldi	r25, 0x7F	; 127
+    11a2:	29 ea       	ldi	r18, 0xA9	; 169
+    11a4:	83 e0       	ldi	r24, 0x03	; 3
+    11a6:	91 50       	subi	r25, 0x01	; 1
+    11a8:	20 40       	sbci	r18, 0x00	; 0
+    11aa:	80 40       	sbci	r24, 0x00	; 0
+    11ac:	e1 f7       	brne	.-8      	; 0x11a6 <main+0x460>
+    11ae:	00 c0       	rjmp	.+0      	; 0x11b0 <main+0x46a>
+    11b0:	00 00       	nop
+	
+	_delay_ms(1200);
+	
+	LCD_Clear();
+    11b2:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("Date:");
+    11b6:	86 e4       	ldi	r24, 0x46	; 70
+    11b8:	93 e0       	ldi	r25, 0x03	; 3
+    11ba:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_String(date);
+    11be:	8c e6       	ldi	r24, 0x6C	; 108
+    11c0:	90 e0       	ldi	r25, 0x00	; 0
+    11c2:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+    11c6:	80 ec       	ldi	r24, 0xC0	; 192
+    11c8:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("Time:");
+    11cc:	8c e4       	ldi	r24, 0x4C	; 76
+    11ce:	93 e0       	ldi	r25, 0x03	; 3
+    11d0:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_String(time);
+    11d4:	80 e6       	ldi	r24, 0x60	; 96
+    11d6:	90 e0       	ldi	r25, 0x00	; 0
+    11d8:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    11dc:	9f e7       	ldi	r25, 0x7F	; 127
+    11de:	29 ea       	ldi	r18, 0xA9	; 169
+    11e0:	83 e0       	ldi	r24, 0x03	; 3
+    11e2:	91 50       	subi	r25, 0x01	; 1
+    11e4:	20 40       	sbci	r18, 0x00	; 0
+    11e6:	80 40       	sbci	r24, 0x00	; 0
+    11e8:	e1 f7       	brne	.-8      	; 0x11e2 <main+0x49c>
+    11ea:	00 c0       	rjmp	.+0      	; 0x11ec <main+0x4a6>
+    11ec:	00 00       	nop
+    11ee:	16 c0       	rjmp	.+44     	; 0x121c <main+0x4d6>
+	
+	_delay_ms(1200);
+	}
+	else
+	{
+	LCD_Clear();
+    11f0:	0e 94 70 01 	call	0x2e0	; 0x2e0 <LCD_Clear>
+	LCD_String("GSM LOC.AND TIME");
+    11f4:	89 e1       	ldi	r24, 0x19	; 25
+    11f6:	93 e0       	ldi	r25, 0x03	; 3
+    11f8:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+	LCD_Command(0xC0);
+    11fc:	80 ec       	ldi	r24, 0xC0	; 192
+    11fe:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <LCD_Command>
+	LCD_String("ERROR Occurred!!");
+    1202:	82 e5       	ldi	r24, 0x52	; 82
+    1204:	93 e0       	ldi	r25, 0x03	; 3
+    1206:	0e 94 61 01 	call	0x2c2	; 0x2c2 <LCD_String>
+    120a:	9f e7       	ldi	r25, 0x7F	; 127
+    120c:	29 ea       	ldi	r18, 0xA9	; 169
+    120e:	83 e0       	ldi	r24, 0x03	; 3
+    1210:	91 50       	subi	r25, 0x01	; 1
+    1212:	20 40       	sbci	r18, 0x00	; 0
+    1214:	80 40       	sbci	r24, 0x00	; 0
+    1216:	e1 f7       	brne	.-8      	; 0x1210 <main+0x4ca>
+    1218:	00 c0       	rjmp	.+0      	; 0x121a <main+0x4d4>
+    121a:	00 00       	nop
+	
+	//TxSMSviaSIM800L(AT);
+	
+	while(1)
+	{
+		UART_TxStringfromPROGMEM(AT);
+    121c:	80 eb       	ldi	r24, 0xB0	; 176
+    121e:	91 e0       	ldi	r25, 0x01	; 1
+    1220:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <UART_TxStringfromPROGMEM>
+    1224:	9f e3       	ldi	r25, 0x3F	; 63
+    1226:	2d e0       	ldi	r18, 0x0D	; 13
+    1228:	83 e0       	ldi	r24, 0x03	; 3
+    122a:	91 50       	subi	r25, 0x01	; 1
+    122c:	20 40       	sbci	r18, 0x00	; 0
+    122e:	80 40       	sbci	r24, 0x00	; 0
+    1230:	e1 f7       	brne	.-8      	; 0x122a <main+0x4e4>
+    1232:	00 c0       	rjmp	.+0      	; 0x1234 <main+0x4ee>
+    1234:	00 00       	nop
+    1236:	f2 cf       	rjmp	.-28     	; 0x121c <main+0x4d6>
+
+00001238 <__udivmodsi4>:
+    1238:	a1 e2       	ldi	r26, 0x21	; 33
+    123a:	1a 2e       	mov	r1, r26
+    123c:	aa 1b       	sub	r26, r26
+    123e:	bb 1b       	sub	r27, r27
+    1240:	fd 01       	movw	r30, r26
+    1242:	0d c0       	rjmp	.+26     	; 0x125e <__udivmodsi4_ep>
+
+00001244 <__udivmodsi4_loop>:
+    1244:	aa 1f       	adc	r26, r26
+    1246:	bb 1f       	adc	r27, r27
+    1248:	ee 1f       	adc	r30, r30
+    124a:	ff 1f       	adc	r31, r31
+    124c:	a2 17       	cp	r26, r18
+    124e:	b3 07       	cpc	r27, r19
+    1250:	e4 07       	cpc	r30, r20
+    1252:	f5 07       	cpc	r31, r21
+    1254:	20 f0       	brcs	.+8      	; 0x125e <__udivmodsi4_ep>
+    1256:	a2 1b       	sub	r26, r18
+    1258:	b3 0b       	sbc	r27, r19
+    125a:	e4 0b       	sbc	r30, r20
+    125c:	f5 0b       	sbc	r31, r21
+
+0000125e <__udivmodsi4_ep>:
+    125e:	66 1f       	adc	r22, r22
+    1260:	77 1f       	adc	r23, r23
+    1262:	88 1f       	adc	r24, r24
+    1264:	99 1f       	adc	r25, r25
+    1266:	1a 94       	dec	r1
+    1268:	69 f7       	brne	.-38     	; 0x1244 <__udivmodsi4_loop>
+    126a:	60 95       	com	r22
+    126c:	70 95       	com	r23
+    126e:	80 95       	com	r24
+    1270:	90 95       	com	r25
+    1272:	9b 01       	movw	r18, r22
+    1274:	ac 01       	movw	r20, r24
+    1276:	bd 01       	movw	r22, r26
+    1278:	cf 01       	movw	r24, r30
+    127a:	08 95       	ret
+
+0000127c <atoi>:
+    127c:	fc 01       	movw	r30, r24
+    127e:	88 27       	eor	r24, r24
+    1280:	99 27       	eor	r25, r25
+    1282:	e8 94       	clt
+    1284:	21 91       	ld	r18, Z+
+    1286:	20 32       	cpi	r18, 0x20	; 32
+    1288:	e9 f3       	breq	.-6      	; 0x1284 <atoi+0x8>
+    128a:	29 30       	cpi	r18, 0x09	; 9
+    128c:	10 f0       	brcs	.+4      	; 0x1292 <atoi+0x16>
+    128e:	2e 30       	cpi	r18, 0x0E	; 14
+    1290:	c8 f3       	brcs	.-14     	; 0x1284 <atoi+0x8>
+    1292:	2b 32       	cpi	r18, 0x2B	; 43
+    1294:	41 f0       	breq	.+16     	; 0x12a6 <atoi+0x2a>
+    1296:	2d 32       	cpi	r18, 0x2D	; 45
+    1298:	39 f4       	brne	.+14     	; 0x12a8 <atoi+0x2c>
+    129a:	68 94       	set
+    129c:	04 c0       	rjmp	.+8      	; 0x12a6 <atoi+0x2a>
+    129e:	0e 94 73 09 	call	0x12e6	; 0x12e6 <__mulhi_const_10>
+    12a2:	82 0f       	add	r24, r18
+    12a4:	91 1d       	adc	r25, r1
+    12a6:	21 91       	ld	r18, Z+
+    12a8:	20 53       	subi	r18, 0x30	; 48
+    12aa:	2a 30       	cpi	r18, 0x0A	; 10
+    12ac:	c0 f3       	brcs	.-16     	; 0x129e <atoi+0x22>
+    12ae:	1e f4       	brtc	.+6      	; 0x12b6 <atoi+0x3a>
+    12b0:	90 95       	com	r25
+    12b2:	81 95       	neg	r24
+    12b4:	9f 4f       	sbci	r25, 0xFF	; 255
+    12b6:	08 95       	ret
+
+000012b8 <memcpy_P>:
+    12b8:	fb 01       	movw	r30, r22
+    12ba:	dc 01       	movw	r26, r24
+    12bc:	02 c0       	rjmp	.+4      	; 0x12c2 <memcpy_P+0xa>
+    12be:	05 90       	lpm	r0, Z+
+    12c0:	0d 92       	st	X+, r0
+    12c2:	41 50       	subi	r20, 0x01	; 1
+    12c4:	50 40       	sbci	r21, 0x00	; 0
+    12c6:	d8 f7       	brcc	.-10     	; 0x12be <memcpy_P+0x6>
+    12c8:	08 95       	ret
+
+000012ca <strncmp>:
+    12ca:	fb 01       	movw	r30, r22
+    12cc:	dc 01       	movw	r26, r24
+    12ce:	41 50       	subi	r20, 0x01	; 1
+    12d0:	50 40       	sbci	r21, 0x00	; 0
+    12d2:	30 f0       	brcs	.+12     	; 0x12e0 <strncmp+0x16>
+    12d4:	8d 91       	ld	r24, X+
+    12d6:	01 90       	ld	r0, Z+
+    12d8:	80 19       	sub	r24, r0
+    12da:	19 f4       	brne	.+6      	; 0x12e2 <strncmp+0x18>
+    12dc:	00 20       	and	r0, r0
+    12de:	b9 f7       	brne	.-18     	; 0x12ce <strncmp+0x4>
+    12e0:	88 1b       	sub	r24, r24
+    12e2:	99 0b       	sbc	r25, r25
+    12e4:	08 95       	ret
+
+000012e6 <__mulhi_const_10>:
+    12e6:	7a e0       	ldi	r23, 0x0A	; 10
+    12e8:	97 9f       	mul	r25, r23
+    12ea:	90 2d       	mov	r25, r0
+    12ec:	87 9f       	mul	r24, r23
+    12ee:	80 2d       	mov	r24, r0
+    12f0:	91 0d       	add	r25, r1
+    12f2:	11 24       	eor	r1, r1
+    12f4:	08 95       	ret
+
+000012f6 <_exit>:
+    12f6:	f8 94       	cli
+
+000012f8 <__stop_program>:
+    12f8:	ff cf       	rjmp	.-2      	; 0x12f8 <__stop_program>
